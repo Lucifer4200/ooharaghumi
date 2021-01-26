@@ -1,0 +1,1791 @@
+//?=========================Top page css=========================?//
+
+
+//====== about-us area css start ======//
+.about-area {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .section-wrapper {
+        .about-thumb {
+            position: relative;
+            img {
+                width: 100%;
+            }
+        }
+        .about-content {
+            width: 100%;
+            padding: 25px;
+            border-radius: 3px;
+            background: rgba(213,223,225,0.8);
+            @include breakpoint (lg) {
+                position: absolute;
+                bottom: -25px;
+                left: -150px;
+                z-index: 999;
+                width: 460px;
+            }
+            @include breakpoint (xl) {
+                left: -60px;
+            }
+                
+            .content-thumb {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #000;
+                img {
+                    height: 67px;
+                }
+            }
+            .content-text {
+                padding-top: 20px;
+            }
+        }
+    }
+}
+//====== about-us area css ends  ======//
+
+//====== performence area css start =====//
+.performance-area {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .section-wrapper {
+        .perform-item {
+            position: relative;
+            &:hover {
+                .hover-content {
+                    &::after {
+                        transform: scale(1);
+                    }
+                    .content-text {
+                        transform:translate(-50%, -50%) scale(1.1);
+                    }
+                }
+            }
+            .item-thumb {
+            }
+            .hover-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 100%;
+                width: 100%;
+                transform: translate(-50%, -50%);
+                &::after {
+                    @extend %absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    transform: scale(0);
+                    transition: all 0.3s ease-in-out;
+                    background: rgba(44, 63, 67, 0.8)
+                }
+                .content-text {
+                    @extend %flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 111;
+                    width: 100%;
+                    transform:translate(-50%, -50%)scale(0);
+                    transition: all 0.3s ease-in-out;
+                    .crount {
+                        padding-right: 8px;
+                        border-right: 2px solid $white-color;
+                        border-bottom: 2px solid $white-color;
+                        span {
+                            font-size: 40px;
+                            color: $white-color;
+                            display: inline-block;
+                        }
+                    }
+                    .inner-text {
+                        padding-left: 10px;
+                        h4 {
+                            margin: 0;
+                            font-weight: 400;
+                            color: $white-color;
+                        }
+                        p {
+                            margin: 0;
+                            color: $white-color;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
+//====== performence area css ends  =====//
+
+//*===== recruit area css start =====*//
+.recruit-area {
+    position: relative;
+    min-height: 460px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(../../assets/images/recruit/01.jpg);
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .4;
+        background: linear-gradient(135deg, #99b2b7 0%,#344c5d 40%);
+    }
+    .section-wrapper {
+        padding: 60px 0;
+        position: relative;
+        @include breakpoint (md) {
+            padding: 80px 0;
+        } 
+        @include breakpoint (lg) {
+            padding: $common-padding;
+        }
+        .section-header {
+            h3 {
+                font-weight: 400;
+                color: $white-color;
+            }
+            span {
+                color: $white-color;
+            }
+        }
+        .wrapper-content {
+            text-align: center;
+            p {
+                margin: 0;
+                color: $white-color;
+            }
+            a {
+                &.btn {
+                    margin-top: 30px;
+                    border-radius: 5px;
+                    border: 1px solid #2dabdd;
+                    background: $white-color;
+                    &:hover {
+                        background: #28a745;
+                        span {
+                            color: $white-color;
+                        }
+                    }
+                    span {
+                        color: #2dabdd;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+//*===== recruit area css ends  =====*//
+
+//*===== news-release-area css start =====*//
+.news-release-area {
+    padding: 60px 0;
+    background: #f1ecdf;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .section-header {
+        h3 {
+            padding-bottom: 20px;
+            position: relative;
+            &::after {
+                @extend %absolute;
+                bottom: 0;
+                left: 50%;
+                height: 3px;
+                width: 100px;
+                transform: translateX(-50%);
+                background: #d5dfe1;
+            }
+        }
+        
+    }
+    .section-wrapper {
+        .news-item {
+            padding: 20px;
+            background: $white-color;
+            .item-thumb {
+                height: 145px;
+                margin-bottom: 12px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 1px -2px 35px rgba(0, 0, 0,  .05);
+                }
+            }
+            .item-content {
+                .news-date {
+                    padding-bottom: 15px;
+                    span {
+                        color: #fff;
+                        padding: 0 3px;
+                        border-radius: 2px;
+                        font-size: 14px;
+                        background: #948c75;
+                        display: inline-block;
+                    }
+                }
+                a {
+                    color: #000;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        color: #28a745;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+//*===== news-release-area css ends  =====*//
+
+//*====== seepast-area css start =======*//
+
+//*====== seepast-area css start =======*//
+.seepast-area {
+    padding: 60px 0;
+    background: #f1ecdf;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .section-header-link {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 75px;
+        a {
+            height: 80px;
+            width: 80px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 100%;
+            color: $white-color;
+            background: #344c5d;
+        }
+    }
+    .section-wrapper {
+        padding: 20px;
+        border: 1px solid #ccc;
+        @include breakpoint (sm) {
+            padding: 40px 50px 20px;
+        }
+        .past-content {
+            h3 {
+                margin: 0;
+                font-weight: 400;
+                padding-bottom: 5px;
+                letter-spacing: 1.5px;
+            }
+            span {
+                color: #000;
+                font-size: 14px;
+            }
+        }
+    }
+}
+//*====== seepast-area css ends  =======*//
+
+//*====== map and sponsor css start =====*//
+.map-area {
+    .section-wrapper {
+        #map {
+            padding: 0 50px 27px;
+            background: #d5dfe1;
+            iframe {
+                height: 450px;
+                width: 100%;
+            }
+        }
+        .col-padd {
+            padding: 50px;
+            height: 485px;
+            background: #f2f2f2;
+            .sponsor-content {
+                padding: 50px 30px 35px;
+                background: $white-color;
+                .sponsor-inner {
+                    h3 {
+                        margin: 0;
+                        padding-bottom: 24px;
+                        font-weight: 500;
+                        letter-spacing: 1.5px;
+                        @include breakpoint (sm) {
+                            font-size: 24px;
+                        }
+                    }
+                    span {
+                        color: #333;
+                        strong {
+                            color: #000;
+                        }
+                    }
+                    .contact-info {
+                        span {
+                            padding-top: 5px;
+                            display: block;
+                        }
+                    }
+                }
+                .sponsor-item {
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+}
+//*====== map and sponsor css ends  =====*//
+
+
+//?============================Top page css======================?//
+
+
+//?============================About page css======================?//
+
+
+//*========= about-us area css start ==========*//
+.about-us-area {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .section-wrapper {
+        .about-content {
+            .about-text {
+                h4 {
+                    margin: 0;
+                    color: #2dabdd;
+                    padding-bottom: 5px;
+                    margin-bottom: 16px;
+                    border-bottom: 1px solid #000;
+                }
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: 300;
+                    padding-bottom: 20px;
+                }
+                .text-bottom {
+                    float: right;
+                    text-align: right;
+                    padding-top: 65px;
+                    span {
+                        color: #000;
+                        font-weight: 300;
+                    }
+                    strong {
+                        display: block;
+                        color: #000;
+                        padding-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+//*========= about-us area css ends  ==========*//
+
+//*======== brand concept area css start ======*//
+.brand-concept {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .section-wapper {
+        .wrapper-header {
+            h4 {
+                margin: 0;
+                color: #1a92ba;
+                padding-bottom: 5px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid #000;
+            }
+        }
+        .wrapper-content {
+            text-align: center;
+            .content-thumb {
+                height: 100px;
+                img {
+                    height: 100%;
+                }
+            }
+            .content-text {
+                span {
+                    display: inline-block;
+                    padding: 20px 0 30px;
+                }
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: 300;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+//*======== brand concept area css ends  ======*//
+
+//*======== footer page link area css start ======*//
+.footer-page-link {
+    background: #f1ecdf;
+    .link-list {
+        padding: 15px 0;
+        ul.list-menu {
+            margin: 0;
+            list-style: none;
+            @extend %flex;
+            align-items: center;
+            li {
+                i {
+                    margin: 0 10px;
+                }
+                a {
+                    color: #000;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        color: $theme-color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+//*======== footer page link area css ends  ======*//
+
+
+//?============================About page css======================?//
+
+
+//?============================business page css======================?//
+
+//*====== construction area css start =========*//
+.construction-area {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .section-wrapper {
+        .post-item {
+            background: #0e92ba;
+            .item-thumb {
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+            .item-text {
+                padding: 30px;
+                h4 {
+                    font-weight: 600;
+                    letter-spacing: 2.5px;
+                    color: $white-color;
+                    max-width: 150px;
+                    padding-bottom: 5px;
+                    text-align: center;
+                    margin: 0 auto;
+                    border-bottom: 1px solid $white-color;
+                }
+                p {
+                    margin: 0;
+                    line-height: 1.8;
+                    padding-top: 30px;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+//*====== construction area css ends  =========*//
+
+//*====== workflow area css start =======*//
+.workflow-area {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding
+    }
+    .section-header {
+        h3 {
+            padding-bottom: 20px;
+            position: relative;
+            &::after {
+                @extend %absolute;
+                bottom: 0;
+                left: 50%;
+                height: 3px;
+                width: 100px;
+                transform: translateX(-50%);
+                background: #d5dfe1;
+            }
+        }
+        
+    }
+    .section-wrapper {
+        .col-lg-4.col-md-6.col-12.pl-sm-1.pr-sm-1:nth-child(1), :nth-child(2), :nth-child(3) {
+            .post-content {
+              .post-inner {
+                    @include breakpoint (md) {
+                        padding-bottom: 100px;
+                    }
+                }
+            }
+        }
+        .post-content {
+            width: 100%;
+            @include breakpoint (max-sm) {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+            .mobile-workflow-thumb {
+                width: calc(100% - 65%);
+                
+                img {
+                    height: 480px;
+                    @include breakpoint (mobile) {
+                        height: 400px;
+                    }
+                    @include breakpoint (max-mobile) {
+                        height: 380px;
+                    }
+                    @include breakpoint (max-xs) {
+                        height: 360px;
+                    }
+                }
+            }
+            .post-inner {
+                width: 60%;
+                padding-bottom: 30px;
+                @include breakpoint (sm) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                }
+                @include breakpoint (md) {
+                    padding-bottom: 0;
+                }
+                .item-thumb {
+                    img {
+                        width: 100%;
+                    }
+                    @include breakpoint (sm) {
+                        width: 50%;
+                    }
+                }
+                .item-text {
+                    padding-bottom: 30px;
+                    @include breakpoint (sm) {
+                        padding: 0 0 0 10px;
+                        width: calc(100% - 50%);
+                    }
+                    h4 {
+                        font-weight: 500;
+                        padding-bottom: 10px;
+                        @include breakpoint (sm) {
+                            font-size: 18px;
+                        }
+                    }
+                    p {
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}
+//*====== workflow area css ends  =======*//
+
+//?============================business page css======================?//
+
+
+
+//?============================Example page css======================?//
+
+//*======= section link css start ======*//
+.section-link {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .link-wrapper {
+        ul.link-list {
+            margin: 0;
+            width: 100%;
+            @extend %flex;
+            align-items: center;
+            justify-content: space-between;
+            li {
+                list-style: none;
+                width: 100%;
+                @include breakpoint (sm) {
+                    width: calc (100% / 2);
+                }
+                @include breakpoint (md) {
+                    width: calc(100% / 3);
+                }
+                .list-item {
+                    margin: 7.5px;
+                    a {
+                        width: 100%;
+                        position: relative;
+                        z-index: 1;
+                        padding: 30px 0;
+                        color: #0e92ba;
+                        font-weight: 500;
+                        font-size: 22px;
+                        display: inline-block;
+                        text-align: center;
+                        letter-spacing: .3rem;
+                        border: 1px solid #0e92ba;
+                        transition: all 0.3s ease-in-out;
+                        &:hover {
+                            color: $white-color;
+                            &::after {
+                                left: 0;
+                                width: 100%;
+                            }
+                        }
+                        &::after {
+                            @extend %absolute;
+                            top: 0;
+                            right: 0;
+                            width: 0;
+                            height: 100%;
+                            opacity: .6;
+                            z-index: -1;
+                            background-color: #000;
+                            transition: all 0.5s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//*======= section link css ends  ======*//
+
+//*======= education area css start =========*//
+.education-area ,.shop-area, .house-area, .medical-area, .logistics-area, .other-area {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .section-wrapper {
+        .section-hader-thumb {
+            padding-bottom: 25px;
+            @include breakpoint (md) {
+                padding-bottom: 50px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .edu-item {
+            .item-thumb {
+                img {
+
+                }
+            }
+            .item-text {
+                padding-top: 12px;
+                text-align: center;
+                h6 {
+                    font-size: 15px;
+                    font-weight: 500;
+                    letter-spacing: .2rem;
+                }
+                p {
+                    margin: 0;
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+//*======= education area css ends  =========*//
+
+//*======= common modal customization css =======*//
+.modal {
+    .modal-dialog {
+        margin: 0;
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%) !important;
+        @include breakpoint (md) {
+            min-width: 700px;
+        }
+        @include breakpoint (lg) {
+            min-width: 800px;
+        }
+        .modal-content {
+            position: relative;
+            &:hover {
+                button.close {
+                    top: 0;
+                    right: 0;
+                }
+            }
+            button.close {
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                text-align: center;
+                overflow: hidden;
+                border-radius: 3px;
+                opacity: 1;
+                background: #28a745;
+                transition: all 0.3s ease-in-out;
+                &:focus {
+                    outline: 0;
+                }
+                span {
+                    color: $white-color;
+                }
+            }
+            .modal-header {
+                padding: 60px 10px 30px;
+                justify-content: center;
+                h5.modal-title {
+                    margin: 0;
+                    position: relative;
+                    font-weight: 400;
+                    color: #2796bd;
+                    padding-bottom: 10px;
+                    &::after {
+                        @extend %absolute;
+                        bottom: 0;
+                        left: 50%;
+                        height: 1px;
+                        width: 200px;
+                        transform: translateX(-50%);
+                        background: #2dabdd;
+                    }
+                }
+            }
+            .modal-body {
+                padding: 20px 15px 50px;
+                .construction-content {
+                    width: 100%;
+                    @extend %flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include breakpoint (max-md) {
+                        display: block;
+                    }
+                    .content-thumb {
+                        width: 100%;
+                        @include breakpoint (md) {
+                            padding-right: 15px;
+                            width: calc(100% - 50%);
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .content-text {
+                        width: 100%;
+                        padding-top: 20px;
+                        @include breakpoint (md) {
+                            padding-top: 0;
+                            padding-left: 15px;
+                            width: calc(100% - 50%);
+                        }
+                        .text-title {
+                            padding-bottom: 30px;
+                            span {
+                                display: block;
+                                font-weight: 400;
+                                color: #000;
+                                strong {
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                        .text-des {
+                            p {
+                                margin: 0;
+                                font-size: 14px;
+                                line-height: 1.7;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//*======= common modal customization css =======*//
+
+//?============================Example page css======================?//
+
+
+
+//?============================about-us page css======================?//
+
+
+//*===== company-profile-table css start =========*//
+.company-profile-table {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: 90px 0;
+    }
+    .section-wrapper {
+        .table-responsive {
+            table {
+                &.table {
+                    tbody {
+                        tr {
+                            min-width: 900px;
+                            th {
+                                font-size: 15px;
+                                font-weight: 300;
+                                min-width: 150px;
+                                letter-spacing: .2rem;
+                                background: #f1ecdf;
+                            }
+                            td {
+                                font-size: 15px;
+                                min-width: 750px;
+                                font-weight: 300;
+                                letter-spacing: .2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//*===== company-profile-table css ends  =========*//
+
+
+//*===== qualified-person-table css start =========*//
+.qualified-person-table {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: 90px 0;
+    }
+    .section-wrapper {
+        .table-responsive {
+            table {
+                &.table {
+                    tbody {
+                        tr {
+                            th {
+                                font-size: 15px;
+                                font-weight: 300;
+                                letter-spacing: .2rem;
+                                background: #f1ecdf;
+                            }
+                            td {
+                                font-size: 15px;
+                                font-weight: 300;
+                                letter-spacing: .2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//*===== qualified-person-table css ends  =========*//
+
+//*===== qualified-person-table css start =========*//
+.nomination-table {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: 90px 0;
+    }
+    .section-wrapper {
+        .table-responsive {
+            table {
+                &.table {
+                    tbody {
+                        tr {
+                            min-width: 900px;
+                            th {
+                                font-size: 15px;
+                                font-weight: 300;
+                                letter-spacing: .2rem;
+                                background: #f1ecdf;
+                                min-width: 300px;
+                            }
+                            td {
+                                font-size: 15px;
+                                font-weight: 300;
+                                letter-spacing: .2rem;
+                                min-width: 300px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//*===== qualified-person-table css ends  =========*//
+
+
+//?============================about-us page css======================?//
+
+
+//?============================ news page css======================?//
+
+//*========= news area css start ===========*//
+.news-area {
+    padding: 30px 0;
+    @include breakpoint (md) {
+        padding: 50px 0;
+    }
+    .section-wrapper {
+        .news-content {
+            text-align: center;
+            padding-bottom: 50px;
+            border-bottom: 1px dotted #ddd;
+           .news-date {
+                padding-bottom: 25px;
+                span {
+                    font-size: 14px;
+                    color: #fff;
+                    background: #948c75;
+                    padding: 1px 5px 3px;
+                    border-radius: 3px;
+                }
+           }
+        }
+        .news-title {
+            a {
+                // font-size: 30px;
+                font-weight: 300;
+                color: #337ab7;
+                position: relative;
+                padding-bottom: 25px;
+                transition: all 0.3s ease-in-out;
+                @include breakpoint (sm) {
+                    font-size: 30px;
+                }
+                &:hover {
+                    color: #23527c;
+                    text-decoration: underline;
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    left: 50%;
+                    bottom: 0;
+                    width: 60px;
+                    height: 3px; 
+                    transform: translateX(-50%);
+                    background: #d5dfe1;
+                }
+            }
+        }
+        .news-text {
+            padding-top: 30px;
+            p {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 300;
+                letter-spacing: .1rem;
+            }
+        }
+    }
+    &.style-one {
+        .section-wrapper {   
+            .news-content {
+                border-bottom: 0;
+                .news-date {
+                    padding-bottom: 60px;
+                }
+                .news-title {
+                    h4 {
+                        margin: 0;
+                        font-weight: 400;
+                        padding-bottom: 25px;
+                        position: relative;
+                        letter-spacing: .1rem;
+                        @include breakpoint (sm) {
+                            font-size: 26px;
+                        }
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            left: 50%;
+                            bottom: 0;
+                            width: 60px;
+                            height: 3px; 
+                            transform: translateX(-50%);
+                            background: #d5dfe1;
+                        }
+                    }
+                }
+                .news-text {
+                    p {
+                        text-align: left;
+                        line-height: 1.7;
+                    }
+                }
+                .back-btn {
+                    text-align: left;
+                    padding-top: 25px;
+                }
+            }
+        }
+    }
+}
+//*========= news area css ends  ===========*//
+
+//?============================ news page css======================?//
+
+
+
+//?============================ constact page css======================?//
+
+//?============================ constact page css======================?//
+
+//*===== contact-area start ========*//
+.contact-area {
+    padding: 60px 0;
+    .post-texts {
+        p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: .1rem;
+            padding-bottom: 18px;
+            strong {
+                font-size: 24px;
+                color: rgb(204, 153, 255);
+            }
+        }
+    }
+    .contact-header {
+        padding-bottom: 15px;
+        p {
+            margin: 0;
+            padding: 7px;
+            letter-spacing: .2rem;
+            font-weight: 400;
+            background: #f2f2f2;
+        }
+    }
+    .post-text {
+        p {
+            margin: 0;
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: .1rem;
+            padding-bottom: 5px;
+            @include breakpoint (sm) {
+                font-size: 14px;
+            }
+            strong {
+                font-size: 24px;
+                color: rgb(204, 153, 255);
+            }
+        }
+    }
+    .contact-form {
+        form {
+            .table-responsive {
+                table.table {
+                    tbody {
+                        tr {
+                            th {
+                                font-size: 14px;
+                                font-weight: 300;
+                                min-width: 230px;
+                                max-width: 230px;
+                                letter-spacing: .2rem;
+                                background: #f1ecdf;
+                                strong {
+                                    color: #ff0000;
+                                }
+                            }
+                            td {
+                                min-width: 700px;
+                               .form-group {
+                                   margin-bottom: 0;
+                                   display: flex;
+                                   label {
+                                       display: inline-block;
+                                       margin-right: 10px;
+                                       font-size: 14px;
+                                       font-weight: 300;
+                                   }
+                                    .form-control {
+                                        height: 33px;
+                                        &:focus {
+                                            border-color: transparent;
+                                            box-shadow:  inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+                                        }
+                                    }
+                                    textarea {
+                                        height: 115px;
+                                        width: 100%;
+                                        padding: 10px;
+                                        border-radius: 3px;
+                                        border: 1px solid $border-color;
+                                    }
+                               }
+                               p {
+                                   input {
+                                       padding: 5px;
+                                       border-radius: 3px;
+                                       border: 1px solid #ced4da;
+                                   }
+                                   select {
+                                       padding: 5px;
+                                       border-radius: 3px;
+                                       border: 1px solid #ced4da;
+                                       option {
+                                           font-size: 14px;
+                                           font-weight: 300;
+                                       }
+                                   }
+                               }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//*===== contact-area ends  ========*//
+
+//?============================ constact page css======================?//
+
+
+//?============================ recrut top page css======================?//
+
+//*====== banner-slider css start ========*//
+.banner-slider-area {
+    position: relative;
+    .carousel {
+        &:hover {
+            .carousel-control-prev {
+                left: 0;
+                transform: scale(1);
+            } 
+            .carousel-control-next {
+                right: 0;
+                transform: scale(1);
+            } 
+        }
+        .carousel-inner {
+            .carousel-item {
+                height: 400px;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+        .carousel-control-prev {
+            left: -5%;
+        }
+        .carousel-control-next {
+            right: -5%;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+            transform: scale(0);
+            transition: all 0.3s ease-in-out;
+            span {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                border-radius: 100%;
+                background-color: #99b2b7;
+                i {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    .carousel-indicators {
+        bottom: -35px;
+        @include breakpoint (sm) {
+            bottom: -50px;
+        }
+        li {
+           height: 8px;
+           width: 8px;
+           border-radius: 100%;
+           border: 1px solid #333;
+            &.active {
+                background: #000;
+            }
+        }
+    }
+}
+//*====== banner-slider css ends  ========*//
+
+//*====== voice-link-page css start ========*//
+.voice-page, .schedule-page {
+    padding: 40px 0;
+    @include breakpoint (sm) {
+        padding: 60px 0;
+    }
+    .section-thumb {
+        &:hover {
+            a {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+        a {
+            position: relative;
+            overflow: hidden;
+            img {
+                width: 100%;
+                transform: scale(1);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+//*====== voice-link-page css ends  ========*//
+
+//*====== guideline-page-link css start ========*//
+.guideline-page {
+    .section-wrapper {
+        .page-link-btn {
+            text-align: center;
+            padding: 7px;
+            background: #1a92ba;
+            &:hover {
+                a {
+                    &::after {
+                        transform: scale(1);
+                    }
+                    &::before {
+                    transform: translate(-50%, -50%)scale(1);
+                    }
+                }
+            }
+            a {
+                position: relative;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid $white-color;
+                display: inline-block;
+                @include breakpoint (md) {
+                    padding: 20px;
+                }
+                &::after {
+                    @extend %absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    transform: scale(0);
+                    background: rgba(0,0,0,0.6);
+                    transition: all 0.3s ease-in-out;
+                }
+                &::before {
+                    position: absolute;
+                    content: "More";
+                    color: $white-color;
+                    top: 50%;
+                    left: 50%;
+                    padding: 5px 20px;
+                    border: 1px solid $white-color;
+                    z-index: 1;
+                    transform: translate(-50%, -50%)scale(0);
+                    transition: all 0.3s ease-in-out;
+                }
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                    letter-spacing: .2rem;
+                    color: $white-color;
+                    @include breakpoint (sm) {
+                        font-size: 20px;
+                    }
+                    @include breakpoint (lg) {
+                        font-size: 28px;
+                    }
+                    i {
+                        height: 30px;
+                        width: 30px;
+                        line-height: 30px;
+                        font-size: 20px;
+                        border-radius: 100%;
+                        margin-right: 10px;
+                        text-align: center;
+                        color: #1a92ba;
+                        background: $white-color;
+                        @include breakpoint (sm) {
+                            height: 40px;
+                            width: 40px;
+                            line-height: 40px;
+                            font-size: 25px;
+                            margin-right: 15px;
+                        }
+                        @include breakpoint (lg) {
+                            height: 60px;
+                            width: 60px;
+                            line-height: 60px;
+                            font-size: 30px;
+                            margin-right: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//*====== guideline-page-link css start ========*//
+
+//*======= internship-area css start =====*//
+.internship-area {
+    padding: 60px 0;
+    @include breakpoint (sm) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .section-wrapper {
+        .intern-text {
+            p {
+                margin: 0;
+                line-height: 1.7;
+                font-weight: 300;
+                font-size: 14px;
+                letter-spacing: 1px;
+                padding-bottom: 25px;
+            }
+        }
+        .intern-thumb {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+//*======= internship-area css  ends =====*//
+
+
+//?============================ recrut top page css======================?//
+
+
+//?============================ interview page css======================?//
+
+//*====== company area css start ======*//
+.conpany-area {
+    .section-wrapper {
+        padding: 60px 0;
+        @include breakpoint (md) {
+            padding: 80px 0;
+        }
+        @include breakpoint (lg) {
+            padding: $common-padding;
+        }
+        .company-content {
+            .content-title {
+                padding-bottom: 7px;
+                border-bottom: 1px solid #000;
+                h4 {
+                    margin: 0;
+                    font-weight: 400;
+                    span {
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+            }
+           .content-des {
+               padding-top: 20px;
+               h5 {
+                   margin: 0;
+                   font-weight: 300;
+                   padding-bottom: 20px;
+               }
+                p {
+                    margin: 0;
+                    font-size: 13px;
+                    font-weight: 300;
+                    line-height: 1.6;
+                    letter-spacing: .1rem;
+                    padding-bottom: 18px;
+                }
+           }
+        }
+    }
+}
+//*====== company area css ends ======*//
+
+//?============================ interview page css======================?//
+
+
+//?============================ shedule page css======================?//
+
+//*======= shedule area css start =========*//
+.shedule-area {
+    padding: 60px 0;
+    .work-shedule-item {
+        .item-inner {
+            box-sizing: border-box;
+            display: table;
+            width: 100%;
+            margin-bottom: 16px;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 4px;
+            @include breakpoint (max-md) {
+                display: grid;
+            }
+            .item-left {
+                box-sizing: border-box;
+                position: relative;
+                display: table-cell;
+                width: 100%;
+                padding: 15px;
+                text-align: center;
+                vertical-align: middle;
+                background: #344c5d;
+                @include breakpoint (md) {
+                    width: 25%;
+                }
+                &::after {
+                    @extend %absolute;
+                    height: 0;
+                    width: 0;
+                    border: 10px solid transparent;
+                    bottom: -20px;
+                    left: 50%;
+                    margin-left: -10px;
+                    border-top-color: #344c5d;
+                }
+                p {
+                    margin: 0;
+                    font-weight: 400;
+                    color: $white-color;
+                    @include breakpoint (sm) {
+                        font-size: 20px;
+                    }
+                }
+                h4 {
+                    margin: 0;
+                    font-weight: 400;
+                    color: $white-color;
+                    letter-spacing: .1rem;
+                    @include breakpoint (sm) {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .item-right {
+                width: 100%;
+                display: grid;
+                @include breakpoint (lg) {
+                    display: flex;
+                    align-items: center;
+                }
+                .item-text {
+                    box-sizing: border-box;
+                    display: table-cell;
+                    width: 100%;
+                    padding: 15px;
+                    vertical-align: middle;
+                    @include breakpoint (lg) {
+                        width: 60%;
+                    }
+                    p {
+                        margin: 0;
+                        line-height: 1.6;
+                        font-size: 14px;
+                        font-weight: 300;
+                        letter-spacing: .1rem;
+                        padding-bottom: 15px ;
+                    }
+                }
+                .item-thumb {
+                    box-sizing: border-box;
+                    display: table-cell;
+                    width: 100%;
+                    padding: 15px;
+                    vertical-align: middle;
+                    @include breakpoint (lg) {
+                        width: 40%;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+//*======= shedule area css ends  =========*//
+
+//?============================ guideline page css======================?//
+
+//*===== guideline area css start ======*//
+.guidline {
+    .table-header {
+        span {
+            font-weight: 500;
+            color: rgb(26, 146, 186);         
+        }
+    }
+}
+//*===== guideline area css ends  ======*//
+
+//?============================ guideline page css======================?//
+
+
+//?============================ what's new page css======================?//
+
+//*====== what's new area css start =======*//
+.whats-new-area {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .section-wrapper {
+        .whats-item {
+            margin-bottom: 35px;
+            border-bottom: 1px dashed #707070;
+            .item-inner {
+                width: 100%;
+                display: block;
+                padding-bottom: 30px;
+                @include breakpoint (md) {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .inner-left {
+                    width: 100%;
+                    @include breakpoint (md) {
+                        width: calc(100% - 35%);
+                    }
+                    .item-title {
+                        span {
+                            font-size: 14px;
+                            padding: 3px 15px 5px;
+                            display: inline-block;
+                            color: $white-color;
+                            background: #948c75;
+                        }
+                        strong {
+                            color: #a70012;
+                            padding-left: 15px;
+                            text-transform: uppercase;
+                            display: inline-block
+                        }
+                    }
+                    .item-text {
+                        h4 {
+                            a {
+                                margin: 0;
+                                font-weight: 400;
+                                letter-spacing: .2rem;
+                                padding: 10px 0 15px;
+                            }
+                        }
+                        p {
+                            margin: 0;
+                            font-size: 14px;
+                            font-weight: 300;
+                            line-height: 1.7;
+                            letter-spacing: .1rem;
+                            color: #707070;
+                        }
+                    }
+                }
+                .inner-right {
+                    width: 100%;
+                    @include breakpoint (md) {
+                        width: 35%;
+                    }
+                    @include breakpoint (lg) {
+                        width: 25%;
+                    }
+                    .item-thumb {
+                        padding-left: 0;
+                        padding-top: 20px;
+                        @include breakpoint (md) {
+                            padding-top: 0;
+                            padding-left: 20px;
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//*====== what's new area css ends  =======*//
+
+//*====== mdp-pagiation css start =====*//
+.mdp-pagiation {
+    padding-top: 60px;
+    @include breakpoint (sm) {
+        padding-top: 80px;
+    }
+   @include breakpoint (md) {
+        margin-top: 100px; 
+   }
+   nav {
+       ul.pagination {
+           flex-wrap: wrap;
+           li.page-item {
+               padding: .5rem .75rem;
+               transition: all 0.3s ease-in-out;
+               &:hover {
+                   color: $white-color;
+                   background: $theme-color;
+                   a.page-link {
+                       color: $white-color;
+                   }
+               }
+               a.page-link {
+                    border: 0;
+                    padding: 0;
+                    line-height: 1.6;
+                    color: #000;
+                    background: transparent;
+               }
+           }
+       }
+   }
+}
+//*====== mdp-pagiation css ends  =====*//
+
+//?============================ what's new page css======================?//
+
+
+//?============================ news-details page css======================?//
+.news-details {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .news-header {
+        position: relative;
+        @extend %flex;
+        align-items: center;
+        padding-bottom: 10px;
+        padding-left: 16px;
+        justify-content: space-between;
+        border-bottom: 2px solid #948c75;
+        &::before {
+            @extend %absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 6px;
+            background: #948c75;
+        }
+        h4 {
+            margin: 0;
+            font-weight: 400;
+            letter-spacing: .2rem;
+        }
+        p {
+            margin: 0;
+        }
+    }
+    .details-item {
+        padding-top: 35px;
+        .item-thumb {
+            height: 250px;
+            @include breakpoint (md) {
+                height: 400px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .item-text {
+            padding-top: 30px;
+            p {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 300;
+                letter-spacing: .1rem;
+                line-height: 1.7;
+            }
+        }
+    }
+}
+//?============================ news-details page css======================?//
+

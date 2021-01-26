@@ -1,0 +1,418 @@
+//*======= header css start =====*//
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 111;
+    .header-bg {
+        .header-item {
+            @extend %flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            .header-logo {
+                position: relative;
+                z-index: 1111;
+                @include breakpoint (lg) {
+                    width: 20%;
+                }
+                a.your-barnd {
+                   img {
+                       height: 50px;
+                       @include breakpoint (sm) {
+                           height: 60px;
+                       }
+                   }
+                }
+            }
+            .header-menu {
+                .main-menu {
+                    @include breakpoint (max-lg) {
+                        position: fixed;
+                        top: -500px;
+                        left: 0;
+                        width: 100vw;
+                        min-height: 436;
+                        z-index: 999;
+                        overflow-y: scroll;
+                        opacity: 0;
+                        background-color: #343434;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &.open {
+                        top: 0;
+                        padding-top: 106px;
+                        opacity: 1;
+                        @include breakpoint (lg) {
+                            padding-top: 0;
+                        }
+                    }
+                    ul.menu-list {
+                        margin: 0;
+                        display: block;
+                        border-top: 1px solid #000000;
+                        @include breakpoint (lg) {
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            padding-top: 0;
+                            border-top: 0;
+                        }
+                        li {
+                            list-style: none;
+                            position: relative;
+                            border-top: 1px solid #484848;
+                            border-bottom: 1px solid #000000;
+                            @include breakpoint (lg) {
+                                border-top: 0;
+                                border-bottom: 0;  
+                            }
+                            &.dd-icon-down {
+                                position: relative;
+                                &::before {
+                                    position: absolute;
+                                    content: "\f107";
+                                    font-family: FontAwesome;
+                                    top: 5px;
+                                    right: 20px;
+                                    color: $white-color;
+                                    font-size: 25px;
+                                    @include breakpoint (lg) {
+                                        content: none!important;
+                                    }
+                                }
+                                &.show {
+                                    &::before {
+                                        content: "\f106";
+                                    }
+                                }
+                            }
+                            
+                            &:last-child {
+                                border-bottom: 0;
+                            }
+                            &.active {
+                                a {
+                                   color: $white-color;
+                                   &::after {
+                                        @extend %absolute;
+                                        height: 2px;
+                                        width: 80%;                                 
+                                        bottom: 10px;
+                                        left: 50%;
+                                        margin-left: -40%;
+                                        transform: scale(1);
+                                        background-color: $white-color;
+                                        transition: all 0.2s ease-in;
+                                   }
+                                }
+                            }
+                            &:hover {
+                                .submenu {
+                                    @include breakpoint (lg) {
+                                        transform: translateY(0);
+                                        opacity: 1;
+                                        visibility: visible;
+                                    }
+                                }
+                            }
+                            ul.submenu {
+                                @include breakpoint (lg) {
+                                    position: absolute;
+                                    top: calc(100%);
+                                    left: 0;
+                                    -webkit-transition: all ease 0.3s;
+                                    -moz-transition: all ease 0.3s;
+                                    transition: all ease 0.3s;
+                                    z-index: 9;
+                                    background: #ffffff;
+                                    width: 220px;
+                                    padding: 0;
+                                    -webkit-transform: translateY(35px);
+                                    -ms-transform: translateY(35px);
+                                    transform: translateY(35px);
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+                                }
+                                @include breakpoint (max-lg) {
+                                    max-height: 0;
+                                    overflow: hidden;
+                                    transition: max-height 0.15s ease-out;
+                                }
+                                &.show {
+                                   @include breakpoint (max-lg) {}
+                                   max-height: 500px;
+                                   transition: max-height 0.25s ease-in;
+                                }
+                                li a.active {
+                                    background: $theme-color;
+                                    padding-left: 22px;
+                                    color: #fff;
+                                }
+                                a {
+                                    padding: 10px 20px;
+                                    text-transform: capitalize;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    font-size: 14px;
+                                    color: #fff;
+                                    font-weight: 500;
+                                    border-bottom: 1px solid #e5e5e5;
+                                    @include breakpoint (lg) {
+                                        color: #0e2c53;
+                                    }
+                                    &::after {
+                                        content: none;
+                                    }
+                                }
+                            } 
+                        }
+                        a {
+                            font-weight: 300;
+                            padding: 12px 20px;
+                            font-size: 14px;
+                            color: $white-color;
+                            display: table;
+                            text-decoration: none;
+                            position: relative;
+                            transition: all 0.3s ease-in-out;
+                            @include breakpoint (lg) {
+                                padding: 20px 15px;
+                            }
+                            @include breakpoint (xl) {
+                                padding: 28px 20px;
+                            } 
+                            &:hover {
+                                color: $white-color;
+                                @include breakpoint (lg) {
+                                    opacity: .6;
+                                }
+                                &::after {
+                                    transform: scale(1);
+                                    -moz-transform: scale(1);
+                                    -webkit-transform: scale(1);
+                                    -o-transform: scale(1);
+                                    -ms-transform: scale(1);
+                                    opacity: .6;
+                                }
+                            }
+                            &::after {
+                                @extend %absolute;
+                                transition: all 0.2s ease-in;
+                                transform: scale(0);
+                                height: 2px;
+                                width: 80%;
+                                background-color: $white-color;
+                                bottom: 10px;
+                                left: 50%;
+                                margin-left: -40%;
+                            }
+                        }
+                    }
+                }
+                .mobile-bar {
+                    display: block;  
+                    height: 40px;
+                    width: 40px;
+                    line-height: 40px;
+                    position: relative;
+                    margin: 0 15px;
+                    @include breakpoint (lg) {
+                        display: none;
+                    }
+                    &.close { 
+                        opacity: 1;
+                        z-index: 11111;
+                        span {
+                            background: $white-color;
+                            &:nth-child(1) {
+                                margin: 3px 0px;
+                                transform: translate(-70%, -50%) rotate(45deg);
+                            }
+                            &:nth-child(2) {
+                                opacity: 0;
+                            }
+                            &:nth-child(3) {
+                                margin: 3px 0px;
+                                transform: translate(-70%, -50%) rotate(-45deg);
+                            }
+                        }
+                    }
+                    span{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 30px;
+                        height: 4px;
+                        border-radius: 4px;
+                        background: $white-color;
+                        transform: translate(-50%, -50%);
+                        transition: all .3s ease;
+                        &:nth-child(1) {
+                            margin-top: 8px;
+                        }
+                        &:nth-child(3) {
+                            margin-top: -9px;
+                        }
+                    }
+                }
+            }
+        }
+        // &.menu-fixed  {
+        //     position: fixed !important;
+        //     top: 0px;
+        //     left: 0;
+        //     right: 0;
+        //     z-index: 11111;
+        //     background: $white-color;
+        //     box-shadow: 0px 0 10px rgba(136, 136, 136, 0.10);
+        //     .header-item {
+        //         padding: 20px 0;
+        //         .header-menu {
+        //             .main-menu {
+        //                 ul { 
+        //                     li {
+        //                         a {
+        //                             color: #000000;
+        //                         }
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+    }
+    &.style-one {
+        position: relative;
+        .header-bg {
+            background: #344c5d;
+        }
+    }
+}
+//*======= header css ends  =====*//
+
+//*====== footer menu css start ====*//
+footer {
+    .footer-menu-item {
+        padding-top: 10px;
+        @extend %flex;
+        justify-content: flex-start;
+        align-items: center;
+        .footer-logo {
+            img {
+                height: 70px;
+                width: 70px;
+            }
+        }
+        .footer-menu {
+            @include breakpoint (max-sm) {
+                width: 80%;
+            }
+            ul.menu-list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                @extend %flex;
+                align-items: center;
+                li {
+                    a {
+                        color: $theme-color;
+                        font-weight: 300!important;
+                        position: relative;
+                        text-decoration: none;
+                        font-size: 12px;
+                        padding: 10px 8px;
+                        @include breakpoint (sm) {
+                            padding: 10px 20px;
+                            font-size: 14px;
+                        }
+                        &:hover {
+                            color: $theme-color;
+                            &::after {
+                                transform: scale(1);
+                                -moz-transform: scale(1);
+                                -webkit-transform: scale(1);
+                                -o-transform: scale(1);
+                                -ms-transform: scale(1);
+                            }
+                        }
+                        &::after {
+                            @extend %absolute;
+                            -webkit-transition: all 0.2s ease-in;
+                            -moz-transition: all 0.2s ease-in;
+                            -ms-transition: all 0.2s ease-in;
+                            -o-transition: all 0.2s ease-in;
+                            transition: all 0.2s ease-in;
+                            transform: scale(0);
+                            -moz-transform: scale(0);
+                            -webkit-transform: scale(0);
+                            -o-transform: scale(0);
+                            -ms-transform: scale(0);
+                            height: 2px;
+                            width: 80%;
+                            background-color: $theme-color;
+                            bottom: 0;
+                            left: 50%;
+                            margin-left: -40%;
+                        }
+                    }
+                }
+            }
+        }
+        &.style-one {
+            padding-top: 0;
+            background: #344c5d;
+            .footer-menu {
+                padding: 50px 0;
+                ul.menu-list {
+                    li {
+                        a {
+                            font-size: 16px;
+                            font-weight: 600;
+                            letter-spacing: 1.5px;
+                            color: $white-color;
+                            &::after {
+                                content: none;
+                            }
+                            &::before {
+                                @extend %absolute;
+                                bottom: 0;
+                                left: 20px;
+                                height: 2px;
+                                width: 30px;
+                                background: $white-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-logo {
+        .logo-thumb {
+            padding: 80px 0;
+        }
+        .brand-logo {
+            text-align: center;
+            padding-bottom: 20px;
+            a {
+                img {
+                    height: 70px;
+                }
+            }
+        }
+    }
+    .footer-content {
+        text-align: center;
+        background: #333;
+        p {
+            margin: 0;
+            padding: 10px 0;
+            color: $white-color;
+        }
+    }
+}
+//*====== footer menu css ends  ====*//

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- favicon hear -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.jpg" type="image/x-icon">
+    <!-- bootstrap v-5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="assets/sass/style.css">
+
+    <title>IDA</title>
+</head>
+<body>
+
+    <!-- header area start -->
+    <header class="style-one">
+        <div class="header-bg">
+            <div class="container">
+                <div class="header-item">
+                    <div class="header-logo">
+                        <a href="index.html" class="your-barnd">
+                            <img src="assets/images/logo/01.png" class="before" alt="">
+                        </a>
+                    </div>
+                    <div class="header-menu">
+                        <div class="main-menu">
+                            <ul class="menu-list list-unstyled">
+                                <li>
+                                    <a href="about.html" class="ploor-link">大原組について</a>
+                                </li>
+                                <li>
+                                    <a href="business.html" class="ploor-link">事業内容</a>
+                                </li>
+                                <li>
+                                    <a href="example.html" class="ploor-link">施工事例</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#0" class="dropdown">採用情報</a>
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="recruit-top.html">採用情報</a>
+                                        </li>
+                                        <li>
+                                            <a href="interview.html">先輩社員の声e</a>
+                                        </li>
+                                        <li>
+                                            <a href="shedule.html">社員の1日</a>
+                                        </li>
+                                        <li>
+                                            <a href="guideline.html">募集要項</a>
+                                        </li>
+                                        <li>
+                                            <a href="app-form.html" class="active">応募フォーム</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="about-us.html" class="ploor-link">会社情報</a>
+                                </li>
+                                <li>
+                                    <a href="news.html" class="ploor-link">新着情報</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">お問い合わせ</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mobile-bar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header area Ends  -->
+
+    <!-- page header area start -->
+    <section class="page-header">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="banner-position">
+                <div class="banner-title">
+                    <h3>応募フォーム</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- page header area ends  -->
+
+    <!-- contact area start -->
+    <section class="contact-area">
+        <div class="container">
+            <div class="post-texts">
+                <p class="pb-1">どんなことでもお気軽にお問い合わせください。</p>
+                <p>お電話でのお問い合せはs <strong class="text-info">086-259-5970</strong> までご連絡ください。</p>
+            </div>
+            <div class="contact-header">
+                <p>お問い合わせフォーム</p>
+            </div>
+            <div class="post-text">
+                <p>メールフォームより送信後、自動返信メールが届きますのでご確認ください。</p>
+                <p>お問い合わせ内容に応じ、弊社より折り返しご連絡を差し上げます。</p>
+                <p class="pb-3">送信後、3日以上経過しても返信がない場合、お手数をお掛けしますがお電話にてご連絡ください。</p>
+            </div>
+            <div class="contact-form">
+                <form method="post" action="step_save/" id="mailForm" enctype="multipart/form-data">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">                
+                            <tbody>
+                                <tr> 
+                                    <th>応募職種</th>
+                                    <td>                                                   
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="answer-11" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>氏名 <strong>※</strong>
+                                    </th>
+                                    <td>                                                   
+                                        <div class="d-flex">
+                                            <div class="form-group">
+                                                <label for="surname">姓</label>
+                                                <input type="text" class="form-control" id="surName" required>   
+                                            </div>
+                                            <div class="form-group ml-2">
+                                                <label for="name">名</label>
+                                                <input type="text" class="form-control" id="name" required>   
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>氏名（フリガナ） <strong>※</strong>
+                                    </th>
+                                    <td>
+                                        <div class="d-flex">
+                                            <div class="form-group">
+                                                <label for="surname">姓</label>
+                                                <input type="text" class="form-control" id="surName" required>
+                                            </div>
+                                            <div class="form-group ml-2">
+                                                <label for="name">名</label>
+                                                <input type="text" class="form-control" id="name" required>   
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>性別 </th>
+                                    <td>
+                                        <input type="hidden" name="answer-9471" value="">                                
+                                        <label for="answer-9471_男性" class="mr-3"><input type="radio" class="checkbox mr-2" name="answer-9471" id="answer-9471_男性" value="男性">男性</label>
+                                        <label for="answer-9471_女性"><input type="radio" class="checkbox mr-2" name="answer-9471" id="answer-9471_女性" value="女性">女性</label>                                                                                                                                                                                                                                         <div class="err_msg" id="err-9471"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>年齢 <strong>※</strong></th>
+                                    <td>
+                                        <div class="d-flex">
+                                            <div class="form-group w-25">
+                                                <input type="text" class="form-control" name="answer-9461">
+                                            </div>
+                                            <label for="age" class="ml-2">年齢</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>所属（学校名など） </th>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="answer-9462">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        住所 <strong>※</strong>
+                                    </th>
+                                    <td>
+                                        <p>
+                                            <input type="tel" name="answer-9473[0]" size="6" value="" class="inputText ant2api-zip" pattern="\d*"> - <input type="tel" name="answer-9473[1]" size="6" value="" class="inputText ant2api-zip" pattern="\d*">
+                                        </p>
+                                        <p>
+                                            <select name="answer-9473[2]" class="inputText ant2api-pref" id="ant2api-pref">
+                                            <option value="">選択してください</option>
+                                            <option value="北海道">北海道</option>
+                                            <option value="青森県">青森県</option>
+                                            <option value="岩手県">岩手県</option>
+                                            <option value="宮城県">宮城県</option>
+                                            <option value="秋田県">秋田県</option>
+                                            <option value="山形県">山形県</option>
+                                            <option value="福島県">福島県</option>
+                                            <option value="茨城県">茨城県</option>
+                                            <option value="栃木県">栃木県</option>
+                                            <option value="群馬県">群馬県</option>
+                                            <option value="埼玉県">埼玉県</option>
+                                            <option value="千葉県">千葉県</option>
+                                            <option value="東京都">東京都</option>
+                                            <option value="神奈川県">神奈川県</option>
+                                            <option value="新潟県">新潟県</option>
+                                            <option value="富山県">富山県</option>
+                                            <option value="石川県">石川県</option>
+                                            <option value="福井県">福井県</option>
+                                            <option value="山梨県">山梨県</option>
+                                            <option value="長野県">長野県</option>
+                                            <option value="岐阜県">岐阜県</option>
+                                            <option value="静岡県">静岡県</option>
+                                            <option value="愛知県">愛知県</option>
+                                            <option value="三重県">三重県</option>
+                                            <option value="滋賀県">滋賀県</option>
+                                            <option value="京都府">京都府</option>
+                                            <option value="大阪府">大阪府</option>
+                                            <option value="兵庫県">兵庫県</option>
+                                            <option value="奈良県">奈良県</option>
+                                            <option value="和歌山県">和歌山県</option>
+                                            <option value="鳥取県">鳥取県</option>
+                                            <option value="島根県">島根県</option>
+                                            <option value="岡山県">岡山県</option>
+                                            <option value="広島県">広島県</option>
+                                            <option value="山口県">山口県</option>
+                                            <option value="徳島県">徳島県</option>
+                                            <option value="香川県">香川県</option>
+                                            <option value="愛媛県">愛媛県</option>
+                                            <option value="高知県">高知県</option>
+                                            <option value="福岡県">福岡県</option>
+                                            <option value="佐賀県">佐賀県</option>
+                                            <option value="長崎県">長崎県</option>
+                                            <option value="熊本県">熊本県</option>
+                                            <option value="大分県">大分県</option>
+                                            <option value="宮崎県">宮崎県</option>
+                                            <option value="鹿児島県">鹿児島県</option>
+                                            <option value="沖縄県">沖縄県</option>
+                                        </select>
+                                        </p>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="select">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        電話番号 <strong>※</strong>
+                                    </th>
+                                    <td>
+                                        <div class="form-group w-50">
+                                            <input type="text" class="form-control" name="phoneNumber">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        メールアドレス <strong>※</strong>
+                                    </th>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        メールアドレス（確認用）
+                                    </th>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>お問い合わせ内容<strong>※</strong></th>
+                                    <td> 
+                                        <div class="form-group" id="err-9463">
+                                            <textarea name="" id="message"></textarea>  
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pageLink">
+                        <div class="pageLinkBox text-center mt-5">
+                            <button type="submit" class="btn"><span>入力内容確認</span></button>
+                        </div>
+                    </div>
+                    <input type="hidden" name="token" value="1189ee44b423686afe86e2e0b3b7ea36dfc69c0e18e83ebe09e3506b5182157a">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- contact area ends  -->
+    
+    <!-- footer page link -->
+    <section class="footer-page-link">
+        <div class="container">
+            <div class="link-list">
+                <ul class="list-menu">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li><a href="recruit-top.html">採用情報</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li><a href="app-form.html">応募フォーム</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- footer page link -->
+
+    <!-- footer area start -->
+    <footer>
+        <div class="container-fluid p-0">
+            <div class="footer-menu-item style-one">
+                <div class="container">
+                    <div class="footer-menu">
+                        <ul class="menu-list list-unstyled">
+                            <li>
+                                <a href="about.html" class="ploor-link">大原組について</a>
+                            </li>
+                            <li>
+                                <a href="business.html" class="ploor-link">事業内容</a>
+                            </li>
+                            <li>
+                                <a href="example.html" class="ploor-link">施工事例</a>
+                            </li>
+                            <li class="active">
+                                <a href="recruit-top.html" class="ploor-link">採用情報</a>
+                            </li>
+                            <li>
+                                <a href="about-us.html" class="ploor-link">会社情報</a>
+                            </li>
+                            <li>
+                                <a href="news.html" class="ploor-link">新着情報</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-logo pt-4">
+                <div class="brand-logo">
+                    <a href="index.html"><img src="assets/images/footer/logo_ooharagumi.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content">
+            <p>Copyright (C) 大原組01 All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- footer area ends  -->
+
+    <!-- optional js -->
+    <script src="assets/js/vendors.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.carousel-line-arrow.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/function.js"></script>
+
+</body>
+</html>
