@@ -1789,3 +1789,41 @@
 }
 //?============================ news-details page css======================?//
 
+
+//*===== scrollTop css start ======*//
+.scrollToTop {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    z-index: 999;
+    bottom: 3px;
+    right: 3px;
+    position: fixed;
+    border-radius: 5px;
+    -webkit-transform: translateY(150px);
+    -ms-transform: translateY(150px);
+    transform: translateY(150px);
+    background: #afa698;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    @include breakpoint (sm) {
+        bottom: 30px;
+        right: 30px;
+    }
+    &.active {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        animation: bounceInDown 2s;
+        -webkit-animation: bounceInDown 2s;
+        -moz-animation: bounceInDown 2s;
+    }
+}
+//*===== scrollTop css ends ======*//
+
+

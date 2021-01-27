@@ -43,9 +43,9 @@
         .content-inner {
             padding: 45px 0;
             display: block;
-            text-align: center;
             @include breakpoint (mobile) {
                 padding: 25px 0;
+                text-align: center;
             }
             @include breakpoint (sm) {
                 display: flex;
