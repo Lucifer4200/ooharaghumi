@@ -3,6 +3,7 @@
     height: 100vh;
     position: relative;
     background-size:  cover;
+    background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url(../../assets/images/banner/01.jpg);
@@ -19,17 +20,22 @@
                 letter-spacing: 0.3rem;
                 color: $white-color;
                 padding-bottom: 20px;
+                @include breakpoint (max-sm) {
+                    font-size: 20px;
+                    letter-spacing: .1rem;
+                }
                 @include breakpoint (md) {
                     padding-bottom: 45px;
                 }
             }
             p {
                 margin: 0;
-                font-size: 18px;
+                font-size: 14px;
                 padding-bottom: 10px;
                 color: $white-color;
                 @include breakpoint (md) {
                     padding-bottom: 22px;
+                    font-size: 18px;
                 }
             }
         }
@@ -44,7 +50,7 @@
             padding: 45px 0;
             display: block;
             @include breakpoint (mobile) {
-                padding: 25px 0;
+                padding: 15px 0;
                 text-align: center;
             }
             @include breakpoint (sm) {
@@ -61,7 +67,7 @@
                         &:nth-child(1) {
                             padding-bottom: 25px;
                             @include breakpoint (mobile) {
-                                padding-bottom: 15px;
+                                padding-bottom: 12px;
                             }
                         }
                         span {
@@ -75,24 +81,29 @@
             }
             .content-right {
                 .right-link {
-                    @extend %flex;
-                    align-items: center;
-                    text-align: center;
-                    justify-content: center;
-                    background: #7a6a53;
-                    border-radius: 5px;
-                    margin-top: 30px;
+                    margin-top: 15px;
                     @include breakpoint (sm) {
-                        height: 80px;
-                        width: 80px;
-                        border-radius: 100%;
                         margin-top: 0;
                     }
                     a {
+                        @extend %flex;
+                        align-items: center;
+                        text-align: center;
+                        justify-content: center;
                         font-size: 14px;
-                        vertical-align: center;
+                        background: #7a6a53;
+                        border-radius: 5px;
                         color: $white-color;
                         text-decoration: none;
+                        transition: all 0.3s ease-in-out;
+                        @include breakpoint (sm) {
+                            height: 80px;
+                            width: 80px;
+                            border-radius: 100%;
+                        }
+                        &:hover {
+                            opacity: 0.6;
+                        }
                     }
                 }
             }

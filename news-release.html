@@ -18,7 +18,7 @@
 
     <title>IDA</title>
 </head>
-<body>
+<body class="scrool-smooth">
 
     <!-- header area start -->
     <header class="style-one">
@@ -49,7 +49,7 @@
                                             <a href="recruit-top.html">採用情報</a>
                                         </li>
                                         <li>
-                                            <a href="interview.html">先輩社員の声</a>
+                                            <a href="interview.html">先輩社員の声e</a>
                                         </li>
                                         <li>
                                             <a href="shedule.html">社員の1日</a>
@@ -68,10 +68,10 @@
                                 <li>
                                     <a href="about-us.html" class="ploor-link">会社情報</a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="news.html" class="ploor-link">新着情報</a>
                                 </li>
-                                <li class="active">
+                                <li>
                                     <a href="contact.html">お問い合わせ</a>
                                 </li>
                             </ul>
@@ -94,119 +94,38 @@
         <div class="container">
             <div class="banner-position">
                 <div class="banner-title">
-                    <h3>お問い合わせ</h3>
+                    <h3>ニュースリリース</h3>
                 </div>
             </div>
         </div>
     </section>
     <!-- page header area ends  -->
 
-    <!-- contact area start -->
-    <section class="contact-area">
+    <!-- news area start -->
+    <section class="news-area style-one">
         <div class="container">
-            <div class="post-texts">
-                <p class="pb-1">どんなことでもお気軽にお問い合わせください。</p>
-                <p>お電話でのお問い合せはs <strong>086-259-5970</strong> までご連絡ください。</p>
-            </div>
-            <div class="contact-header">
-                <p>お問い合わせフォーム</p>
-            </div>
-            <div class="post-text">
-                <p>メールフォームより送信後、自動返信メールが届きますのでご確認ください。</p>
-                <p>お問い合わせ内容に応じ、弊社より折り返しご連絡を差し上げます。</p>
-                <p class="pb-3">送信後、3日以上経過しても返信がない場合、お手数をお掛けしますがお電話にてご連絡ください。</p>
-            </div>
-            <div class="contact-form">
-                <form method="post" action="step_save/" id="mailForm" enctype="multipart/form-data">
-                    <div class="table-responsive">
-                        <table class="table table-bordered">                
-                            <tbody>
-                                <tr>
-                                    <th>法人名</th>
-                                    <td>                                                   
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="answer-11" value="">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>ご担当者氏名<strong>※</strong>
-                                    </th>
-                                    <td>                                                   
-                                        <div class="d-flex">
-                                            <div class="form-group">
-                                                <label for="surname">姓</label>
-                                                <input type="text" class="form-control" id="surName" required>   
-                                            </div>
-                                            <div class="form-group ml-2">
-                                                <label for="name">名</label>
-                                                <input type="text" class="form-control" id="name" required>   
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>ご担当者氏名（フリガナ<strong>※</strong>
-                                    </th>
-                                    <td>
-                                        <div class="d-flex">
-                                            <div class="form-group">
-                                                <label for="surname">姓</label>
-                                                <input type="text" class="form-control" id="surName" required>
-                                            </div>
-                                            <div class="form-group ml-2">
-                                                <label for="name">名</label>
-                                                <input type="text" class="form-control" id="name" required>   
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>電話番号</th>
-                                    <td> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control w-50" name="answer-9460"> 
-                                        </div>                                                
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>メールアドレス<strong>※</strong></th>
-                                    <td>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="answer-9461">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>メールアドレス（確認用</th>
-                                    <td>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="answer-9462">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>お問い合わせ内容<strong>※</strong></th>
-                                    <td> 
-                                        <div class="form-group" id="err-9463">
-                                            <textarea name="" id="message"></textarea>  
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+            <div class="section-wrapper">
+                <div class="news-content">
+                    <div class="news-date">
+                        <span>2021.01.01</span>
                     </div>
-                    <div class="pageLink mt-5">
-                        <div class="pageLinkBox text-center">
-                            <button type="submit" class="btn"><span>入力内容確認</span><span><i class="fa fa-angle-double-right ml-2"></i></span></button>
-                        </div>
+                    <div class="news-title">
+                        <h4>タイトルが入ります。</h4>
                     </div>
-                    <input type="hidden" name="token" value="1189ee44b423686afe86e2e0b3b7ea36dfc69c0e18e83ebe09e3506b5182157a">
-                </form>
+                    <div class="news-thumb">
+                        <img src="assets/images/news/01.jpg" alt="">
+                    </div>
+                    <div class="news-text">
+                        <p>ここに記事本文を書きます。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。新着情報が入ります。</p>
+                    </div>
+                    <div class="back-btn">
+                        <a href="index.html" class="btn"><span><i class="fa fa-angle-double-left mr-2"></i></span><span>戻る</span></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-- contact area ends  -->
+    <!-- news area ends  -->
     
     <!-- footer page link -->
     <section class="footer-page-link">
@@ -215,7 +134,9 @@
                 <ul class="list-menu">
                     <li><a href="index.html">ホーム</a></li>
                     <li><i class="fa fa-angle-right"></i></li>
-                    <li><a href="about.html">お問い合わせ</a></li>
+                    <li><a href="news.html">ニュースリリース</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li><a href="news-2020.html">タイトルが入ります。</a></li>
                 </ul>
             </div>
         </div>
@@ -229,7 +150,7 @@
                 <div class="container">
                     <div class="footer-menu">
                         <ul class="menu-list list-unstyled">
-                            <li class="active">
+                            <li>
                                 <a href="about.html" class="ploor-link">大原組について</a>
                             </li>
                             <li>
@@ -244,7 +165,7 @@
                             <li>
                                 <a href="about-us.html" class="ploor-link">会社情報</a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="news.html" class="ploor-link">新着情報</a>
                             </li>
                             <li>
@@ -266,11 +187,13 @@
     </footer>
     <!-- footer area ends  -->
 
+
     <!-- scrollTop start -->
     <div class="scrollToTop">
         <i class="fa fa-angle-double-up"></i>
     </div>
     <!-- scrollTop ends  -->
+
 
     <!-- optional js -->
     <script src="assets/js/vendors.min.js"></script>

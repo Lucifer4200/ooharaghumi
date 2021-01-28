@@ -15,7 +15,7 @@
 	$(document).on('click','.mobile-bar',function(){
     $(".mobile-bar").toggleClass("close");
 		$(".main-menu").toggleClass("open");
-		$(".overlay").addClass("active");
+    $(".header-bg").toggleClass('bg-chnage')
 		$("body").toggleClass("overflow");
   });
   

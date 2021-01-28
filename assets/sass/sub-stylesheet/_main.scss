@@ -61,6 +61,11 @@
         .perform-item {
             position: relative;
             &:hover {
+                .item-thumb {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
                 .hover-content {
                     &::after {
                         transform: scale(1);
@@ -71,6 +76,12 @@
                 }
             }
             .item-thumb {
+                position: relative;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    transition: all 0.3s ease-in-out;
+                }
             }
             .hover-content {
                 position: absolute;
@@ -87,7 +98,7 @@
                     bottom: 0;
                     transform: scale(0);
                     transition: all 0.3s ease-in-out;
-                    background: rgba(44, 63, 67, 0.8)
+                    background: rgba(0,0,0,0.6);
                 }
                 .content-text {
                     @extend %flex;
@@ -101,25 +112,37 @@
                     transform:translate(-50%, -50%)scale(0);
                     transition: all 0.3s ease-in-out;
                     .crount {
-                        padding-right: 8px;
-                        border-right: 2px solid $white-color;
-                        border-bottom: 2px solid $white-color;
                         span {
-                            font-size: 40px;
+                            font-size: 30px;
+                            font-weight: 400;
                             color: $white-color;
                             display: inline-block;
+                            @include breakpoint (sm) {
+                                font-size: 50px;
+                            }
                         }
                     }
                     .inner-text {
-                        padding-left: 10px;
+                        padding-left: 5px;
+                        @include breakpoint (sm) {
+                            padding-left: 10px;
+                        }
                         h4 {
                             margin: 0;
                             font-weight: 400;
                             color: $white-color;
+                            @include breakpoint (max-sm) {
+                                font-size: 16px;
+                            }
                         }
                         p {
                             margin: 0;
+                            opacity: .8;
+                            letter-spacing: 1px;
                             color: $white-color;
+                            @include breakpoint (max-sm) {
+                                font-size: 9px;
+                            }
                         }
                     }
                 } 
@@ -137,6 +160,10 @@
     background-position: center;
     background-attachment: fixed;
     background-image: url(../../assets/images/recruit/01.jpg);
+    @include breakpoint (max-sm) {
+        background-size: 250% 120%;
+        background-attachment: inherit;
+    }
     .overlay {
         position: absolute;
         top: 0;
@@ -169,22 +196,28 @@
             p {
                 margin: 0;
                 color: $white-color;
+                line-height: 1.7;
+                @include breakpoint (max-sm) {
+                    font-size: 13px;
+                }
             }
             a {
                 &.btn {
                     margin-top: 30px;
-                    border-radius: 5px;
-                    border: 1px solid #2dabdd;
-                    background: $white-color;
+                    padding: 20px 50px;
+                    background: transparent;
+                    border-color: $white-color;
                     &:hover {
-                        background: #28a745;
-                        span {
-                            color: $white-color;
-                        }
+                        background: #1a92ba;
+                        border-color: #0e92ba;
                     }
                     span {
-                        color: #2dabdd;
-                        font-size: 20px;
+                        color: $white-color;
+                        svg {
+                            g {
+                                fill: $white-color;
+                            }
+                        }
                     }
                 }
             }
@@ -223,9 +256,17 @@
         .news-item {
             padding: 20px;
             background: $white-color;
+            @include breakpoint (max-sm) {
+                text-align: center;
+            }
             .item-thumb {
                 height: 145px;
                 margin-bottom: 12px;
+                @include breakpoint (max-sm) {
+                    max-width: 250px;
+                    margin: auto;
+                    padding-bottom: 25px;
+                }
                 img {
                     width: 100%;
                     height: 100%;
@@ -258,7 +299,6 @@
 }
 //*===== news-release-area css ends  =====*//
 
-//*====== seepast-area css start =======*//
 
 //*====== seepast-area css start =======*//
 .seepast-area {
@@ -285,6 +325,10 @@
             border-radius: 100%;
             color: $white-color;
             background: #344c5d;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                opacity: .6;
+            }
         }
     }
     .section-wrapper {
@@ -293,7 +337,20 @@
         @include breakpoint (sm) {
             padding: 40px 50px 20px;
         }
+        .borders {
+            border-bottom: 1px solid #ccc;
+            @include breakpoint (md) {
+                border-bottom: 0;
+                border-right: 1px solid #ccc;
+            }
+        }
         .past-content {
+            text-align: center;
+            padding-bottom: 30px;
+            @include breakpoint (md) {
+                text-align: left;
+                padding-bottom: 0;
+            }
             h3 {
                 margin: 0;
                 font-weight: 400;
@@ -305,6 +362,12 @@
                 font-size: 14px;
             }
         }
+        .pastlist-btn {
+            text-align: center;
+            @include breakpoint (md) {
+                text-align: left;
+            }
+        }
     }
 }
 //*====== seepast-area css ends  =======*//
@@ -313,8 +376,11 @@
 .map-area {
     .section-wrapper {
         #map {
-            padding: 0 50px 27px;
+            padding: 0 30px 20px;
             background: #d5dfe1;
+            @include breakpoint (sm) {
+                padding: 0 50px 27px;
+            }
             iframe {
                 height: 450px;
                 width: 100%;
@@ -331,7 +397,8 @@
                     h3 {
                         margin: 0;
                         padding-bottom: 24px;
-                        font-weight: 500;
+                        font-weight: 400;
+                        font-size: 18px;
                         letter-spacing: 1.5px;
                         @include breakpoint (sm) {
                             font-size: 24px;
@@ -374,13 +441,14 @@
     }
     @include breakpoint (lg) {
         padding: $common-padding;
+        padding-top: 160px;
     }
     .section-wrapper {
         .about-content {
             .about-text {
                 h4 {
                     margin: 0;
-                    color: #2dabdd;
+                    color: rgb(26, 146, 186);
                     padding-bottom: 5px;
                     margin-bottom: 16px;
                     border-bottom: 1px solid #000;
@@ -400,6 +468,7 @@
                         font-weight: 300;
                     }
                     strong {
+                        font-weight: 500;
                         display: block;
                         color: #000;
                         padding-top: 5px;
@@ -485,6 +554,222 @@
 
 
 //?============================About page css======================?//
+
+
+
+//?============================Example page css======================?//
+
+//*======= section link css start ======*//
+.section-link {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .link-wrapper {
+        ul.link-list {
+            margin: 0;
+            width: 100%;
+            @extend %flex;
+            align-items: center;
+            justify-content: space-between;
+            li {
+                list-style: none;
+                @include breakpoint (max-sm) {
+                    width: calc(100% /2);
+                }
+                @include breakpoint (md) {
+                    width: calc(100% / 3);
+                }
+                .list-item {
+                    margin: 7.5px;
+                    a {
+                        width: 100%;
+                        position: relative;
+                        z-index: 1;
+                        padding: 30px 0;
+                        color: #0e92ba;
+                        font-weight: 500;
+                        font-size: 22px;
+                        display: inline-block;
+                        text-align: center;
+                        letter-spacing: .3rem;
+                        border: 1px solid #0e92ba;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+//*======= section link css ends  ======*//
+
+//*======= education area css start =========*//
+.education-area ,.shop-area, .house-area, .medical-area, .logistics-area, .other-area {
+    padding: 60px 0;
+    @include breakpoint (md) {
+        padding: 80px 0;
+    }
+    @include breakpoint (lg) {
+        padding: $common-padding;
+    }
+    .section-wrapper {
+        .section-hader-thumb {
+            padding-bottom: 25px;
+            @include breakpoint (md) {
+                padding-bottom: 50px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .edu-item {
+            .item-thumb {
+                img {
+
+                }
+            }
+            .item-text {
+                padding-top: 12px;
+                text-align: center;
+                h6 {
+                    font-size: 15px;
+                    font-weight: 500;
+                    letter-spacing: .2rem;
+                }
+                p {
+                    margin: 0;
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+//*======= education area css ends  =========*//
+
+//*======= common modal customization css =======*//
+.modal {
+    .modal-dialog {
+        margin: 0;
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%) !important;
+        @include breakpoint (md) {
+            min-width: 700px;
+        }
+        @include breakpoint (lg) {
+            min-width: 800px;
+        }
+        .modal-content {
+            position: relative;
+            &:hover {
+                button.close {
+                    top: 0;
+                    right: 0;
+                }
+            }
+            button.close {
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                text-align: center;
+                overflow: hidden;
+                border-radius: 3px;
+                opacity: 1;
+                background: #0e92ba;
+                transition: all 0.3s ease-in-out;
+                &:focus {
+                    outline: 0;
+                }
+                span {
+                    color: $white-color;
+                }
+            }
+            .modal-header {
+                padding: 60px 10px 30px;
+                justify-content: center;
+                h5.modal-title {
+                    margin: 0;
+                    position: relative;
+                    font-weight: 400;
+                    color: #2796bd;
+                    padding-bottom: 10px;
+                    &::after {
+                        @extend %absolute;
+                        bottom: 0;
+                        left: 50%;
+                        height: 1px;
+                        width: 200px;
+                        transform: translateX(-50%);
+                        background: #2dabdd;
+                    }
+                }
+            }
+            .modal-body {
+                padding: 20px 15px 50px;
+                .construction-content {
+                    width: 100%;
+                    @extend %flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include breakpoint (max-md) {
+                        display: block;
+                    }
+                    .content-thumb {
+                        width: 100%;
+                        @include breakpoint (md) {
+                            padding-right: 15px;
+                            width: calc(100% - 50%);
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .content-text {
+                        width: 100%;
+                        padding-top: 20px;
+                        @include breakpoint (md) {
+                            padding-top: 0;
+                            padding-left: 15px;
+                            width: calc(100% - 50%);
+                        }
+                        .text-title {
+                            padding-bottom: 30px;
+                            span {
+                                display: block;
+                                font-weight: 400;
+                                color: #000;
+                                strong {
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                        .text-des {
+                            p {
+                                margin: 0;
+                                font-size: 14px;
+                                line-height: 1.7;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//*======= common modal customization css =======*//
+
+//?============================Example page css======================?//
 
 
 //?============================business page css======================?//
@@ -636,242 +921,6 @@
 //*====== workflow area css ends  =======*//
 
 //?============================business page css======================?//
-
-
-
-//?============================Example page css======================?//
-
-//*======= section link css start ======*//
-.section-link {
-    padding: 60px 0;
-    @include breakpoint (md) {
-        padding: 80px;
-    }
-    @include breakpoint (lg) {
-        padding: $common-padding;
-    }
-    .link-wrapper {
-        ul.link-list {
-            margin: 0;
-            width: 100%;
-            @extend %flex;
-            align-items: center;
-            justify-content: space-between;
-            li {
-                list-style: none;
-                width: 100%;
-                @include breakpoint (sm) {
-                    width: calc (100% / 2);
-                }
-                @include breakpoint (md) {
-                    width: calc(100% / 3);
-                }
-                .list-item {
-                    margin: 7.5px;
-                    a {
-                        width: 100%;
-                        position: relative;
-                        z-index: 1;
-                        padding: 30px 0;
-                        color: #0e92ba;
-                        font-weight: 500;
-                        font-size: 22px;
-                        display: inline-block;
-                        text-align: center;
-                        letter-spacing: .3rem;
-                        border: 1px solid #0e92ba;
-                        transition: all 0.3s ease-in-out;
-                        &:hover {
-                            color: $white-color;
-                            &::after {
-                                left: 0;
-                                width: 100%;
-                            }
-                        }
-                        &::after {
-                            @extend %absolute;
-                            top: 0;
-                            right: 0;
-                            width: 0;
-                            height: 100%;
-                            opacity: .6;
-                            z-index: -1;
-                            background-color: #000;
-                            transition: all 0.5s ease-in-out;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-//*======= section link css ends  ======*//
-
-//*======= education area css start =========*//
-.education-area ,.shop-area, .house-area, .medical-area, .logistics-area, .other-area {
-    padding: 60px 0;
-    @include breakpoint (md) {
-        padding: 80px 0;
-    }
-    @include breakpoint (lg) {
-        padding: $common-padding;
-    }
-    .section-wrapper {
-        .section-hader-thumb {
-            padding-bottom: 25px;
-            @include breakpoint (md) {
-                padding-bottom: 50px;
-            }
-            img {
-                width: 100%;
-            }
-        }
-        .edu-item {
-            .item-thumb {
-                img {
-
-                }
-            }
-            .item-text {
-                padding-top: 12px;
-                text-align: center;
-                h6 {
-                    font-size: 15px;
-                    font-weight: 500;
-                    letter-spacing: .2rem;
-                }
-                p {
-                    margin: 0;
-                    font-weight: 300;
-                    letter-spacing: 1px;
-                }
-            }
-        }
-    }
-}
-//*======= education area css ends  =========*//
-
-//*======= common modal customization css =======*//
-.modal {
-    .modal-dialog {
-        margin: 0;
-        padding: 10px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        transform: translate(-50%, -50%) !important;
-        @include breakpoint (md) {
-            min-width: 700px;
-        }
-        @include breakpoint (lg) {
-            min-width: 800px;
-        }
-        .modal-content {
-            position: relative;
-            &:hover {
-                button.close {
-                    top: 0;
-                    right: 0;
-                }
-            }
-            button.close {
-                position: absolute;
-                top: -10px;
-                right: -10px;
-                height: 40px;
-                width: 40px;
-                line-height: 40px;
-                text-align: center;
-                overflow: hidden;
-                border-radius: 3px;
-                opacity: 1;
-                background: #28a745;
-                transition: all 0.3s ease-in-out;
-                &:focus {
-                    outline: 0;
-                }
-                span {
-                    color: $white-color;
-                }
-            }
-            .modal-header {
-                padding: 60px 10px 30px;
-                justify-content: center;
-                h5.modal-title {
-                    margin: 0;
-                    position: relative;
-                    font-weight: 400;
-                    color: #2796bd;
-                    padding-bottom: 10px;
-                    &::after {
-                        @extend %absolute;
-                        bottom: 0;
-                        left: 50%;
-                        height: 1px;
-                        width: 200px;
-                        transform: translateX(-50%);
-                        background: #2dabdd;
-                    }
-                }
-            }
-            .modal-body {
-                padding: 20px 15px 50px;
-                .construction-content {
-                    width: 100%;
-                    @extend %flex;
-                    align-items: center;
-                    justify-content: center;
-                    @include breakpoint (max-md) {
-                        display: block;
-                    }
-                    .content-thumb {
-                        width: 100%;
-                        @include breakpoint (md) {
-                            padding-right: 15px;
-                            width: calc(100% - 50%);
-                        }
-                        img {
-                            width: 100%;
-                        }
-                    }
-                    .content-text {
-                        width: 100%;
-                        padding-top: 20px;
-                        @include breakpoint (md) {
-                            padding-top: 0;
-                            padding-left: 15px;
-                            width: calc(100% - 50%);
-                        }
-                        .text-title {
-                            padding-bottom: 30px;
-                            span {
-                                display: block;
-                                font-weight: 400;
-                                color: #000;
-                                strong {
-                                    font-weight: 500;
-                                }
-                            }
-                        }
-                        .text-des {
-                            p {
-                                margin: 0;
-                                font-size: 14px;
-                                line-height: 1.7;
-                                font-weight: 300;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-//*======= common modal customization css =======*//
-
-//?============================Example page css======================?//
-
 
 
 //?============================about-us page css======================?//
@@ -1092,6 +1141,14 @@
                 .back-btn {
                     text-align: left;
                     padding-top: 25px;
+                    a.btn {
+                        border: 0;
+                        padding: 10px 15px;
+                        background: #344c5d;
+                        span, i {
+                            color: $white-color
+                        }
+                    }
                 }
             }
         }
@@ -1100,7 +1157,6 @@
 //*========= news area css ends  ===========*//
 
 //?============================ news page css======================?//
-
 
 
 //?============================ constact page css======================?//
@@ -1213,6 +1269,22 @@
                     }
                 }
             }
+            .pageLink {
+                .pageLinkBox {
+                    button.btn {
+                        color: $white-color;
+                        border: 0;
+                        padding: 10px 20px;
+                        background: #344c5d;
+                        span {
+                            color: $white-color;
+                            i {
+                                color: $white-color;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -1227,6 +1299,7 @@
 .banner-slider-area {
     position: relative;
     .carousel {
+        overflow: hidden;
         &:hover {
             .carousel-control-prev {
                 left: 0;
@@ -1239,10 +1312,13 @@
         }
         .carousel-inner {
             .carousel-item {
-                height: 400px;
-                img {
-                    height: 100%;
-                }
+                // height: 250px;
+                // @include breakpoint (md) {
+                //     height: 400px;
+                // }
+                // img {
+                //     height: 100%;
+                // }
             }
         }
         .carousel-control-prev {
@@ -1292,20 +1368,68 @@
         padding: 60px 0;
     }
     .section-thumb {
+        position: relative;
+        overflow: hidden;
         &:hover {
-            a {
-                img {
-                    transform: scale(1.05);
-                }
+            img {
+                transform: scale(1.05);
             }
         }
-        a {
-            position: relative;
-            overflow: hidden;
-            img {
-                width: 100%;
-                transform: scale(1);
-                transition: all 0.3s ease-in-out;
+        img {
+            width: 100%;
+            transform: scale(1);
+            transition: all 0.3s ease-in-out;
+        }
+        .anouther-btn {
+            position: absolute;
+            bottom: 5px;
+            right: 40px;
+            @include breakpoint (sm) {
+                bottom: 10px;
+                right: 50px;
+            }
+            @include breakpoint (md) {
+                bottom: 15px;
+                right: 100px;
+            }
+            a {
+                position: relative;
+                color: $white-color;
+                text-decoration: none; 
+                padding: 5px 10px 5px 0;
+                letter-spacing: .3rem;
+                @include breakpoint (max-sm) {
+                    font-size: 12px;
+                }
+                &::after {
+                    @extend %absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100px;
+                    height: 1.5px;
+                    background: $white-color;
+                    @include breakpoint (max-sm) {
+                        width: 65px;
+                    }
+                }
+                &::before {
+                    @extend %absolute;
+                    top: 15px;
+                    right: -27px;
+                    height: 20px;
+                    transform: rotate(-30deg);
+                    width: 2px;
+                    background: #fff;
+                    @include breakpoint (max-sm) {
+                        top: 9px;
+                        right: -3px;
+                    }
+                }
+            }
+            &.style-one {
+                left: 35%;
+                right: auto;
+                transform: translateX(-35%);
             }
         }
     }

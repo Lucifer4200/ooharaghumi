@@ -6,6 +6,10 @@ header {
     width: 100%;
     z-index: 111;
     .header-bg {
+        transition: all 0.3s ease-in-out;
+        &.bg-chnage {
+            background: #343434
+        }
         .header-item {
             @extend %flex;
             justify-content: space-between;
@@ -30,23 +34,23 @@ header {
                 .main-menu {
                     @include breakpoint (max-lg) {
                         position: fixed;
-                        top: -500px;
+                        top: 100px;
                         left: 0;
-                        width: 100vw;
-                        min-height: 436;
-                        z-index: 999;
+                        z-index: 99;
+                        background: #343434;
+                        width: 100%;
+                        transform: scaleY(0);
+                        transform-origin: top;
+                        max-height: 350px;
                         overflow-y: scroll;
-                        opacity: 0;
-                        background-color: #343434;
-                        transition: all 0.3s ease-in-out;
+                        padding: 0 30px;
+                        padding-bottom: 60px;
+                        -webkit-transition: all 0.3s ease;
+                        -moz-transition: all 0.3s ease;
+                        transition: all 0.3s ease;
                     }
                     &.open {
-                        top: 0;
-                        padding-top: 106px;
-                        opacity: 1;
-                        @include breakpoint (lg) {
-                            padding-top: 0;
-                        }
+                        transform: scaleY(1);
                     }
                     ul.menu-list {
                         margin: 0;
@@ -261,34 +265,14 @@ header {
                 }
             }
         }
-        // &.menu-fixed  {
-        //     position: fixed !important;
-        //     top: 0px;
-        //     left: 0;
-        //     right: 0;
-        //     z-index: 11111;
-        //     background: $white-color;
-        //     box-shadow: 0px 0 10px rgba(136, 136, 136, 0.10);
-        //     .header-item {
-        //         padding: 20px 0;
-        //         .header-menu {
-        //             .main-menu {
-        //                 ul { 
-        //                     li {
-        //                         a {
-        //                             color: #000000;
-        //                         }
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
     }
     &.style-one {
         position: relative;
         .header-bg {
             background: #344c5d;
+            &.bg-chnage {
+                background: #343434
+            }
         }
     }
 }
@@ -319,7 +303,7 @@ footer {
                 align-items: center;
                 li {
                     a {
-                        color: $theme-color;
+                        color: #1a92ba;
                         font-weight: 300!important;
                         position: relative;
                         text-decoration: none;
@@ -339,6 +323,18 @@ footer {
                                 -ms-transform: scale(1);
                             }
                         }
+                        &::before {
+                            @extend %absolute;
+                            top: 50%;
+                            left: -5px;
+                            width: 8px;
+                            height: 2px;
+                            transform: translateY(-50%);
+                            background: #344c5d;
+                            @include breakpoint (md) {
+                                left: 0;
+                            }
+                        }
                         &::after {
                             @extend %absolute;
                             -webkit-transition: all 0.2s ease-in;
@@ -353,7 +349,7 @@ footer {
                             -ms-transform: scale(0);
                             height: 2px;
                             width: 80%;
-                            background-color: $theme-color;
+                            background-color: #1a92ba;
                             bottom: 0;
                             left: 50%;
                             margin-left: -40%;
@@ -370,16 +366,17 @@ footer {
                 ul.menu-list {
                     li {
                         a {
-                            font-size: 16px;
+                            font-size: 14px;
                             font-weight: 600;
                             letter-spacing: 1.5px;
                             color: $white-color;
+                            padding-right: 60px;
                             &::after {
                                 content: none;
                             }
                             &::before {
                                 @extend %absolute;
-                                bottom: 0;
+                                top: 100%;
                                 left: 20px;
                                 height: 2px;
                                 width: 30px;

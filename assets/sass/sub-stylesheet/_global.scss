@@ -174,7 +174,6 @@ video {
 /*-- all custom btn css --*/
 button.btn {
     display: inline-table;
-    @extend %shadow;
     &:focus {
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -191,23 +190,30 @@ button.btn {
     display: inline-flex;
     align-items: center;
     overflow: hidden;
-    border-radius: 25px;
     position: relative;
-    background: #28a745;
+    border: 1.5px solid #1a92ba;
+    background: $white-color;
     &:focus {
         box-shadow: none;
     }
     &:hover {
         transition: all 0.3s ease-in-out;
-        background: #79ccff;
+        background: #1a92ba;
         span, i {
-            color: #000;
+            color: $white-color;
+        }
+        svg {
+           g {
+            fill: $white-color;
+           }
         }
     }
     span {
+        color: #1a92ba;
+        letter-spacing: .1rem;
         text-transform: uppercase;
         i {
-            color: $white-color;
+            color: #1a92ba;
         }
     }
     .btn-ripple
@@ -310,6 +316,11 @@ button.btn {
         position: relative;
         padding-bottom: 25px;
         display: inline-block;
+        color: #999;
+        font-weight: 300;
+        font-size: 14px;
+        opacity: .6;
+        letter-spacing: .1rem;
         &::after {
             @extend %absolute;
             bottom: 0;
