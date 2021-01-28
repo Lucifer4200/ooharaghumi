@@ -285,6 +285,9 @@ footer {
         @extend %flex;
         justify-content: flex-start;
         align-items: center;
+        @include breakpoint (max-sm) {
+            display: none;
+        }
         .footer-logo {
             img {
                 height: 70px;

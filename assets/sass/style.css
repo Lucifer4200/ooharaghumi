@@ -1160,6 +1160,12 @@ footer .footer-menu-item {
           align-items: center;
 }
 
+@media (max-width: 575px) {
+  footer .footer-menu-item {
+    display: none;
+  }
+}
+
 footer .footer-menu-item .footer-logo img {
   height: 70px;
   width: 70px;
@@ -1313,6 +1319,12 @@ footer .footer-content p {
   height: 100vh;
 }
 
+@media (max-width: 575px) {
+  .banner-area .banner-positon {
+    height: 80vh;
+  }
+}
+
 .banner-area .banner-positon .banner-content {
   text-align: center;
 }
@@ -1329,6 +1341,7 @@ footer .footer-content p {
   .banner-area .banner-positon .banner-content h3 {
     font-size: 20px;
     letter-spacing: .1rem;
+    padding-bottom: 10px;
   }
 }
 
@@ -1340,7 +1353,7 @@ footer .footer-content p {
 
 .banner-area .banner-positon .banner-content p {
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   padding-bottom: 10px;
   color: #fff;
 }
@@ -1731,7 +1744,12 @@ footer .footer-content p {
 }
 
 .recruit-area .section-wrapper .section-header span {
+  padding-bottom: 10px;
   color: #fff;
+}
+
+.recruit-area .section-wrapper .section-header span::after {
+  background: #fff;
 }
 
 .recruit-area .section-wrapper .wrapper-content {
@@ -1822,13 +1840,12 @@ footer .footer-content p {
   .news-release-area .section-wrapper .news-item .item-thumb {
     max-width: 250px;
     margin: auto;
-    padding-bottom: 25px;
+    margin-bottom: 40px;
   }
 }
 
 .news-release-area .section-wrapper .news-item .item-thumb img {
   width: 100%;
-  height: 100%;
   -webkit-box-shadow: 1px -2px 35px rgba(0, 0, 0, 0.05);
           box-shadow: 1px -2px 35px rgba(0, 0, 0, 0.05);
 }
@@ -1910,13 +1927,23 @@ footer .footer-content p {
 }
 
 .seepast-area .section-wrapper {
-  padding: 20px;
+  padding: 55px 35px;
   border: 1px solid #ccc;
 }
 
 @media (min-width: 576px) {
   .seepast-area .section-wrapper {
     padding: 40px 50px 20px;
+  }
+}
+
+.seepast-area .section-wrapper .section-header h3 {
+  font-weight: 500;
+}
+
+@media (max-width: 575px) {
+  .seepast-area .section-wrapper .section-header h3 {
+    font-size: 32px;
   }
 }
 
@@ -1945,9 +1972,14 @@ footer .footer-content p {
 
 .seepast-area .section-wrapper .past-content h3 {
   margin: 0;
-  font-weight: 400;
   padding-bottom: 5px;
   letter-spacing: 1.5px;
+}
+
+@media (max-width: 575px) {
+  .seepast-area .section-wrapper .past-content h3 {
+    font-size: 22px;
+  }
 }
 
 .seepast-area .section-wrapper .past-content span {
@@ -1965,6 +1997,18 @@ footer .footer-content p {
   }
 }
 
+@media (max-width: 425px) {
+  .seepast-area .section-wrapper .pastlist-btn button.btn {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .seepast-area .section-wrapper .pastlist-btn button.btn span {
+    font-size: 10px;
+  }
+}
+
 .map-area .section-wrapper #map {
   padding: 0 30px 20px;
   background: #d5dfe1;
@@ -1972,19 +2016,25 @@ footer .footer-content p {
 
 @media (min-width: 576px) {
   .map-area .section-wrapper #map {
-    padding: 0 50px 27px;
+    padding: 0 50px 35px;
   }
 }
 
 .map-area .section-wrapper #map iframe {
-  height: 450px;
+  height: 500px;
   width: 100%;
 }
 
 .map-area .section-wrapper .col-padd {
-  padding: 50px;
-  height: 485px;
+  padding: 25px;
   background: #f2f2f2;
+}
+
+@media (min-width: 576px) {
+  .map-area .section-wrapper .col-padd {
+    padding: 56px 50px;
+    height: 540px;
+  }
 }
 
 .map-area .section-wrapper .col-padd .sponsor-content {
@@ -1994,7 +2044,7 @@ footer .footer-content p {
 
 .map-area .section-wrapper .col-padd .sponsor-content .sponsor-inner h3 {
   margin: 0;
-  padding-bottom: 24px;
+  padding-bottom: 15px;
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 1.5px;
@@ -2003,6 +2053,7 @@ footer .footer-content p {
 @media (min-width: 576px) {
   .map-area .section-wrapper .col-padd .sponsor-content .sponsor-inner h3 {
     font-size: 24px;
+    padding-bottom: 24px;
   }
 }
 
@@ -2020,7 +2071,12 @@ footer .footer-content p {
 }
 
 .map-area .section-wrapper .col-padd .sponsor-content .sponsor-item {
-  padding-top: 30px;
+  padding-top: 20px;
+  height: 100px;
+}
+
+.map-area .section-wrapper .col-padd .sponsor-content .sponsor-item img {
+  height: 100%;
 }
 
 .about-us-area {
@@ -2105,8 +2161,10 @@ footer .footer-content p {
   height: 100px;
 }
 
-.brand-concept .section-wapper .wrapper-content .content-thumb img {
-  height: 100%;
+@media (min-width: 576px) {
+  .brand-concept .section-wapper .wrapper-content .content-thumb img {
+    height: 100%;
+  }
 }
 
 .brand-concept .section-wapper .wrapper-content .content-text span {
@@ -2367,6 +2425,12 @@ footer .footer-content p {
   width: 100%;
 }
 
+@media (max-width: 575px) {
+  .modal .modal-dialog .modal-content .modal-body .construction-content .content-thumb {
+    padding: 0 50px;
+  }
+}
+
 @media (min-width: 768px) {
   .modal .modal-dialog .modal-content .modal-body .construction-content .content-thumb {
     padding-right: 15px;
@@ -2483,6 +2547,7 @@ footer .footer-content p {
 .workflow-area .section-header h3 {
   padding-bottom: 20px;
   position: relative;
+  font-weight: 600;
 }
 
 .workflow-area .section-header h3::after {
@@ -2591,8 +2656,15 @@ footer .footer-content p {
 }
 
 .workflow-area .section-wrapper .post-content .post-inner .item-text h4 {
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: .2rem;
   padding-bottom: 10px;
+}
+
+@media (max-width: 575px) {
+  .workflow-area .section-wrapper .post-content .post-inner .item-text h4 {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 576px) {

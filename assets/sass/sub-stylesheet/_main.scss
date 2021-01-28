@@ -188,7 +188,11 @@
                 color: $white-color;
             }
             span {
+                padding-bottom: 10px;
                 color: $white-color;
+                &::after {
+                    background: $white-color;
+                }
             }
         }
         .wrapper-content {
@@ -265,11 +269,10 @@
                 @include breakpoint (max-sm) {
                     max-width: 250px;
                     margin: auto;
-                    padding-bottom: 25px;
+                    margin-bottom: 40px;
                 }
                 img {
                     width: 100%;
-                    height: 100%;
                     box-shadow: 1px -2px 35px rgba(0, 0, 0,  .05);
                 }
             }
@@ -332,10 +335,18 @@
         }
     }
     .section-wrapper {
-        padding: 20px;
+        padding: 55px 35px;
         border: 1px solid #ccc;
         @include breakpoint (sm) {
             padding: 40px 50px 20px;
+        }
+        .section-header {
+            h3 {
+                font-weight: 500;
+                @include breakpoint (max-sm) {
+                    font-size: 32px;
+                }
+            }
         }
         .borders {
             border-bottom: 1px solid #ccc;
@@ -353,9 +364,11 @@
             }
             h3 {
                 margin: 0;
-                font-weight: 400;
                 padding-bottom: 5px;
                 letter-spacing: 1.5px;
+                @include breakpoint (max-sm) {
+                    font-size: 22px;
+                }
             }
             span {
                 color: #000;
@@ -366,6 +379,16 @@
             text-align: center;
             @include breakpoint (md) {
                 text-align: left;
+            }
+            button.btn {
+                @include breakpoint (mobile) {
+                    padding: 10px;
+                }
+                span {
+                    @include breakpoint (mobile) {
+                        font-size: 10px;
+                    }
+                }
             }
         }
     }
@@ -379,29 +402,33 @@
             padding: 0 30px 20px;
             background: #d5dfe1;
             @include breakpoint (sm) {
-                padding: 0 50px 27px;
+                padding: 0 50px 35px;
             }
             iframe {
-                height: 450px;
+                height: 500px;
                 width: 100%;
             }
         }
         .col-padd {
-            padding: 50px;
-            height: 485px;
+            padding: 25px;
             background: #f2f2f2;
+            @include breakpoint (sm) {
+                padding: 56px 50px;
+                height: 540px;
+            }
             .sponsor-content {
                 padding: 50px 30px 35px;
                 background: $white-color;
                 .sponsor-inner {
                     h3 {
                         margin: 0;
-                        padding-bottom: 24px;
+                        padding-bottom: 15px;
                         font-weight: 400;
                         font-size: 18px;
                         letter-spacing: 1.5px;
                         @include breakpoint (sm) {
                             font-size: 24px;
+                            padding-bottom: 24px;
                         }
                     }
                     span {
@@ -418,7 +445,11 @@
                     }
                 }
                 .sponsor-item {
-                    padding-top: 30px;
+                    padding-top: 20px;
+                    height: 100px;
+                    img {
+                        height: 100%;
+                    }
                 }
             }
         }
@@ -504,7 +535,9 @@
             .content-thumb {
                 height: 100px;
                 img {
-                    height: 100%;
+                    @include breakpoint (sm) {
+                        height: 100%;
+                    }
                 }
             }
             .content-text {
@@ -726,6 +759,9 @@
                     }
                     .content-thumb {
                         width: 100%;
+                        @include breakpoint (max-sm) {
+                            padding: 0 50px;
+                        }
                         @include breakpoint (md) {
                             padding-right: 15px;
                             width: calc(100% - 50%);
@@ -830,6 +866,7 @@
         h3 {
             padding-bottom: 20px;
             position: relative;
+            font-weight: 600;
             &::after {
                 @extend %absolute;
                 bottom: 0;
@@ -862,7 +899,6 @@
             }
             .mobile-workflow-thumb {
                 width: calc(100% - 65%);
-                
                 img {
                     height: 480px;
                     @include breakpoint (mobile) {
@@ -902,8 +938,12 @@
                         width: calc(100% - 50%);
                     }
                     h4 {
-                        font-weight: 500;
+                        font-weight: 600;
+                        letter-spacing: .2rem;
                         padding-bottom: 10px;
+                        @include breakpoint (max-sm) {
+                            font-size: 16px;
+                        }
                         @include breakpoint (sm) {
                             font-size: 18px;
                         }

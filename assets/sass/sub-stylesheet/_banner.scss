@@ -12,6 +12,9 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        @include breakpoint (max-sm) {
+            height: 80vh;
+        } 
         .banner-content {
             text-align: center;
             h3 {
@@ -23,6 +26,7 @@
                 @include breakpoint (max-sm) {
                     font-size: 20px;
                     letter-spacing: .1rem;
+                    padding-bottom: 10px;
                 }
                 @include breakpoint (md) {
                     padding-bottom: 45px;
@@ -30,7 +34,7 @@
             }
             p {
                 margin: 0;
-                font-size: 14px;
+                font-size: 12px;
                 padding-bottom: 10px;
                 color: $white-color;
                 @include breakpoint (md) {
