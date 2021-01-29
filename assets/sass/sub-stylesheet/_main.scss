@@ -1,6 +1,5 @@
 //?=========================Top page css=========================?//
 
-
 //====== about-us area css start ======//
 .about-area {
     padding: 60px 0;
@@ -159,9 +158,12 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-image: url(../../assets/images/recruit/01.jpg);
+    background-image: url(../../assets/images/recruit/01-mobile.jpg);
+    @include breakpoint (sm) {
+        background-image: url(../../assets/images/recruit/01.jpg);
+    }
     @include breakpoint (max-sm) {
-        background-size: 250% 120%;
+        background-size: 100% 100%;
         background-attachment: inherit;
     }
     .overlay {
@@ -184,7 +186,7 @@
         }
         .section-header {
             h3 {
-                font-weight: 400;
+                font-weight: 500;
                 color: $white-color;
             }
             span {
@@ -381,6 +383,25 @@
                 text-align: left;
             }
             button.btn {
+                background: #0e92ba;
+                span {
+                    color: $white-color;
+                    i {
+                        color: #0e92ba;
+                        height: 30px;
+                        width: 30px;
+                        font-size: 16px;
+                        line-height: 30px;
+                        border-radius: 100%;
+                        background: $white-color;
+                        @include breakpoint (sm) {
+                            font-size: 20px;
+                            height: 35px;
+                            width: 35px;
+                            line-height: 35px;
+                        }
+                    }
+                }
                 @include breakpoint (mobile) {
                     padding: 10px;
                 }
@@ -533,7 +554,9 @@
         .wrapper-content {
             text-align: center;
             .content-thumb {
-                height: 100px;
+                @include breakpoint (sm) {
+                    height: 100px;
+                }
                 img {
                     @include breakpoint (sm) {
                         height: 100%;
@@ -649,14 +672,42 @@
         padding: $common-padding;
     }
     .section-wrapper {
-        .section-hader-thumb {
-            padding-bottom: 25px;
-            @include breakpoint (md) {
-                padding-bottom: 50px;
+        .section-hader-thumb { 
+            padding: 15px 20px 10px; 
+            margin-bottom: 50px;
+            background: linear-gradient(45deg, #12428f, #1a91ba, #84c6e9);
+            .inner-thumb {
+                position: relative;
+                display: flex;
+                align-items: baseline;
+                padding-bottom: 5px;
+                &::after {
+                    @extend %absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 1px;
+                    width: 100%;
+                    opacity: .6;
+                    background: $white-color;
+                }
+                h4 {
+                    margin: 0;
+                    font-weight: 500;
+                    color: $white-color;
+                    margin-right: 20px;
+                    @include breakpoint (mobile) {
+                        font-size: 20px;
+                        margin-right: 10px;
+                    }
+                }
+                span {
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: .1rem;
+                    color: $white-color
+                }
             }
-            img {
-                width: 100%;
-            }
+            
         }
         .edu-item {
             .item-thumb {
@@ -676,6 +727,9 @@
                     margin: 0;
                     font-weight: 300;
                     letter-spacing: 1px;
+                    @include breakpoint (max-sm) {
+                        font-size: 12px;
+                    }
                 }
             }
         }
@@ -728,14 +782,20 @@
                 }
             }
             .modal-header {
-                padding: 60px 10px 30px;
+                padding: 50px 10px 20px;
                 justify-content: center;
+                @include breakpoint (sm) {
+                    padding: 60px 10px 30px;
+                }
                 h5.modal-title {
                     margin: 0;
                     position: relative;
                     font-weight: 400;
                     color: #2796bd;
                     padding-bottom: 10px;
+                    @include breakpoint (max-sm) {
+                        font-size: 14px;
+                    }
                     &::after {
                         @extend %absolute;
                         bottom: 0;
@@ -748,7 +808,10 @@
                 }
             }
             .modal-body {
-                padding: 20px 15px 50px;
+                padding: 20px 15px 20px;
+                @include breakpoint (sm) {
+                    padding: 20px 15px 50px;
+                }
                 .construction-content {
                     width: 100%;
                     @extend %flex;
@@ -760,7 +823,9 @@
                     .content-thumb {
                         width: 100%;
                         @include breakpoint (max-sm) {
-                            padding: 0 50px;
+                            padding: 0 25px;
+                            height: 150px;
+                            text-align: center;
                         }
                         @include breakpoint (md) {
                             padding-right: 15px;
@@ -768,6 +833,10 @@
                         }
                         img {
                             width: 100%;
+                            @include breakpoint (max-sm) {
+                                height: 100%;
+                                width: auto;
+                            }
                         }
                     }
                     .content-text {
@@ -780,6 +849,9 @@
                         }
                         .text-title {
                             padding-bottom: 30px;
+                            @include breakpoint (max-sm) {
+                                padding-bottom: 15px;
+                            }
                             span {
                                 display: block;
                                 font-weight: 400;
@@ -795,6 +867,9 @@
                                 font-size: 14px;
                                 line-height: 1.7;
                                 font-weight: 300;
+                                @include breakpoint (max-sm) {
+                                    font-size: 11px;
+                                }
                             }
                         }
                     }
@@ -908,7 +983,7 @@
                         height: 380px;
                     }
                     @include breakpoint (max-xs) {
-                        height: 360px;
+                        height: 390px;
                     }
                 }
             }
@@ -924,8 +999,14 @@
                     padding-bottom: 0;
                 }
                 .item-thumb {
+                    @include breakpoint (mobile) {
+                        height: 150px;
+                    }
                     img {
                         width: 100%;
+                        @include breakpoint (mobile) {
+                            height: 100%;
+                        }
                     }
                     @include breakpoint (sm) {
                         width: 50%;
@@ -952,6 +1033,36 @@
                         margin: 0;
                         font-size: 14px;
                         font-weight: 300;
+                    }
+                }
+                .cvl-btn {
+                    display: none;
+                    position: relative;
+                    @include breakpoint (mobile) {
+                        display: block;
+                    }
+                    button.btn {
+                        border-radius: 5px;
+                        padding: 5px 20px;
+                    }
+                    &::after {
+                        @extend %absolute;
+                        top: 50%;
+                        left: -50px;
+                        width: 50px;
+                        border-bottom: 1px dashed #0e92ba;
+                        @include breakpoint (mobile) {
+                            left: -80px;
+                            width: 80px;
+                        }
+                        @include breakpoint (max-mobile) {
+                            left: -70px;
+                            width: 70px;
+                        }
+                        @include breakpoint (max-xs) {
+                            left: -60px;
+                            width: 60px;
+                        }
                     }
                 }
             }
@@ -1338,8 +1449,9 @@
 //*====== banner-slider css start ========*//
 .banner-slider-area {
     position: relative;
+    overflow: hidden;
+    padding-bottom: 80px;
     .carousel {
-        overflow: hidden;
         &:hover {
             .carousel-control-prev {
                 left: 0;
@@ -1349,17 +1461,6 @@
                 right: 0;
                 transform: scale(1);
             } 
-        }
-        .carousel-inner {
-            .carousel-item {
-                // height: 250px;
-                // @include breakpoint (md) {
-                //     height: 400px;
-                // }
-                // img {
-                //     height: 100%;
-                // }
-            }
         }
         .carousel-control-prev {
             left: -5%;
@@ -1384,7 +1485,7 @@
         }
     }
     .carousel-indicators {
-        bottom: -35px;
+        bottom: -45px;
         @include breakpoint (sm) {
             bottom: -50px;
         }
@@ -1422,8 +1523,8 @@
         }
         .anouther-btn {
             position: absolute;
-            bottom: 5px;
-            right: 40px;
+            bottom: 20px;
+            right: 35px;
             @include breakpoint (sm) {
                 bottom: 10px;
                 right: 50px;
@@ -1467,9 +1568,11 @@
                 }
             }
             &.style-one {
-                left: 35%;
-                right: auto;
-                transform: translateX(-35%);
+                @include breakpoint (sm) {
+                    left: 35%;
+                    right: auto;
+                    transform: translateX(-35%);
+                }
             }
         }
     }
@@ -1529,6 +1632,10 @@
                     font-weight: 400;
                     letter-spacing: .2rem;
                     color: $white-color;
+                    @include breakpoint (max-sm) {
+                        display: block;
+                        font-size: 12px;
+                    }
                     @include breakpoint (sm) {
                         font-size: 20px;
                     }
@@ -1536,20 +1643,18 @@
                         font-size: 28px;
                     }
                     i {
-                        height: 30px;
-                        width: 30px;
-                        line-height: 30px;
+                        height: 40px;
+                        width: 40px;
+                        line-height: 40px;
                         font-size: 20px;
                         border-radius: 100%;
-                        margin-right: 10px;
+                        margin-bottom: 10px;
                         text-align: center;
                         color: #1a92ba;
                         background: $white-color;
                         @include breakpoint (sm) {
-                            height: 40px;
-                            width: 40px;
-                            line-height: 40px;
                             font-size: 25px;
+                            margin-bottom: 0;
                             margin-right: 15px;
                         }
                         @include breakpoint (lg) {
@@ -1781,18 +1886,50 @@
         .whats-item {
             margin-bottom: 35px;
             border-bottom: 1px dashed #707070;
+            .item-title {
+                span {
+                    font-size: 14px;
+                    padding: 3px 15px 5px;
+                    display: inline-block;
+                    color: $white-color;
+                    background: #948c75;
+                }
+                strong {
+                    color: #a70012;
+                    padding-left: 15px;
+                    text-transform: uppercase;
+                    display: inline-block
+                }
+                h4 {
+                    margin: 0;
+                    a {
+                        margin: 0;
+                        font-weight: 400;
+                        letter-spacing: .2rem;
+                        padding: 8px 0 10px;
+                        @include breakpoint (max-lg) {
+                            font-size: 22px;
+                            letter-spacing: .1rem!important;
+                        }
+                        @include breakpoint (max-sm) {
+                            font-size: 20px;
+                        }
+                        @include breakpoint (max-mobile) {
+                            font-size: 16px;
+                            letter-spacing: 0;
+                        }
+                    }
+                }
+            }
             .item-inner {
                 width: 100%;
-                display: block;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 padding-bottom: 30px;
-                @include breakpoint (md) {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
                 .inner-left {
-                    width: 100%;
-                    @include breakpoint (md) {
+                    width: calc(100% - 30%);
+                    @include breakpoint (sm) {
                         width: calc(100% - 35%);
                     }
                     .item-title {
@@ -1809,9 +1946,8 @@
                             text-transform: uppercase;
                             display: inline-block
                         }
-                    }
-                    .item-text {
                         h4 {
+                            margin: 0;
                             a {
                                 margin: 0;
                                 font-weight: 400;
@@ -1819,6 +1955,8 @@
                                 padding: 10px 0 15px;
                             }
                         }
+                    }
+                    .item-text {
                         p {
                             margin: 0;
                             font-size: 14px;
@@ -1826,12 +1964,15 @@
                             line-height: 1.7;
                             letter-spacing: .1rem;
                             color: #707070;
+                            @include breakpoint (max-sm) {
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
                 .inner-right {
-                    width: 100%;
-                    @include breakpoint (md) {
+                    width: 30%;
+                    @include breakpoint (sm) {
                         width: 35%;
                     }
                     @include breakpoint (lg) {
@@ -1840,7 +1981,7 @@
                     .item-thumb {
                         padding-left: 0;
                         padding-top: 20px;
-                        @include breakpoint (md) {
+                        @include breakpoint (sm) {
                             padding-top: 0;
                             padding-left: 20px;
                         }
@@ -1868,8 +2009,11 @@
        ul.pagination {
            flex-wrap: wrap;
            li.page-item {
-               padding: .5rem .75rem;
+               padding: .5rem .50rem;
                transition: all 0.3s ease-in-out;
+               @include breakpoint (sm) {
+                   padding: .5rem .75rem;
+               }
                &:hover {
                    color: $white-color;
                    background: $theme-color;
@@ -1922,13 +2066,26 @@
             margin: 0;
             font-weight: 400;
             letter-spacing: .2rem;
+            @include breakpoint (max-sm) {
+                font-size: 18px;
+                letter-spacing: .1rem;
+            }
         }
         p {
             margin: 0;
+            color: #948c75;
+            @include breakpoint (max-sm) {
+                position: absolute;
+                bottom: -30px;
+                right: 0;
+            }
         }
     }
     .details-item {
-        padding-top: 35px;
+        padding-top: 55px;
+        @include breakpoint (sm) {
+            padding-top: 35px;
+        }
         .item-thumb {
             height: 250px;
             @include breakpoint (md) {
