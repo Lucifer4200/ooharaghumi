@@ -7,8 +7,23 @@ header {
     z-index: 111;
     .header-bg {
         transition: all 0.3s ease-in-out;
+        @include breakpoint (max-sm) {
+            background: #344c5d;
+        }
         &.bg-chnage {
             background: #343434
+        }
+        &.menu-fixed {
+            @include breakpoint (max-sm) {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: #344c5d;
+            }
+            &.bg-chnage {
+                background: #343434;
+            }
         }
         .header-item {
             @extend %flex;

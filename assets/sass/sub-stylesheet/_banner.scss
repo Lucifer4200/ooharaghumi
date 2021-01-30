@@ -151,5 +151,20 @@
             }
         }
     }
+    &.style-one {
+        @include breakpoint (max-sm) {
+            min-height: 150px;
+            background-image: none;
+            background: #948c75;
+        }
+        @include breakpoint (max-mobile) {
+            min-height: 100px;
+        }
+        .overlay {
+            @include breakpoint (max-sm) {
+                background: none;
+            }
+        }
+    }
 }
 // *===== page header css start =====*//

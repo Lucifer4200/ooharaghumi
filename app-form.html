@@ -61,7 +61,7 @@
                                             <a href="app-form.html" class="active">応募フォーム</a>
                                         </li>
                                         <li>
-                                            <a href="whats-news.html">ニュースは何ですか</a>
+                                            <a href="whats-new.html">新着情報</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -123,16 +123,21 @@
                             <tbody>
                                 <tr> 
                                     <th>応募職種</th>
-                                    <td>                                                   
+                                    <td> 
+                                        <div class="d-block d-sm-none">
+                                            <label for="answer-11">応募職種</label>
+                                        </div>                                                  
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="answer-11" required>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>氏名 <strong>※</strong>
-                                    </th>
-                                    <td>                                                   
+                                    <th>氏名 <strong>※</strong></th>
+                                    <td>     
+                                        <div class="d-block d-sm-none">
+                                            <label for="">氏名 <strong class="text-danger">※</strong></label>
+                                        </div>                                              
                                         <div class="d-flex">
                                             <div class="form-group">
                                                 <label for="surname">姓</label>
@@ -146,9 +151,11 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>氏名（フリガナ） <strong>※</strong>
-                                    </th>
+                                    <th>氏名（フリガナ） <strong>※</strong></th>
                                     <td>
+                                        <div class="d-block d-sm-none">
+                                            <label for="">氏名（フリガナ） <strong class="text-danger">※</strong></label>
+                                        </div> 
                                         <div class="d-flex">
                                             <div class="form-group">
                                                 <label for="surname">姓</label>
@@ -164,6 +171,9 @@
                                 <tr>
                                     <th>性別 </th>
                                     <td>
+                                        <div class="d-block d-sm-none">
+                                            <label for="">性別</label>
+                                        </div> 
                                         <input type="hidden" name="answer-9471" value="">                                
                                         <label for="answer-9471_男性" class="mr-3"><input type="radio" class="checkbox mr-2" name="answer-9471" id="answer-9471_男性" value="男性">男性</label>
                                         <label for="answer-9471_女性"><input type="radio" class="checkbox mr-2" name="answer-9471" id="answer-9471_女性" value="女性">女性</label>                                                                                                                                                                                                                                         <div class="err_msg" id="err-9471"></div>
@@ -172,6 +182,9 @@
                                 <tr>
                                     <th>年齢 <strong>※</strong></th>
                                     <td>
+                                        <div class="d-block d-sm-none">
+                                            <label for="">年齢 <strong class="text-danger">※</strong></label>
+                                        </div> 
                                         <div class="d-flex">
                                             <div class="form-group w-25">
                                                 <input type="text" class="form-control" name="answer-9461">
@@ -183,6 +196,9 @@
                                 <tr>
                                     <th>所属（学校名など） </th>
                                     <td>
+                                        <div class="d-block d-sm-none">
+                                            <label for="">所属（学校名など） <strong class="text-danger">※</strong></label>
+                                        </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="answer-9462">
                                         </div>
@@ -193,6 +209,9 @@
                                         住所 <strong>※</strong>
                                     </th>
                                     <td>
+                                        <div class="d-block d-sm-none">
+                                            <label for="">住所 <strong class="text-danger">※</strong></label>
+                                        </div>
                                         <p>
                                             <input type="tel" name="answer-9473[0]" size="6" value="" class="inputText ant2api-zip" pattern="\d*"> - <input type="tel" name="answer-9473[1]" size="6" value="" class="inputText ant2api-zip" pattern="\d*">
                                         </p>
@@ -258,6 +277,9 @@
                                         電話番号 <strong>※</strong>
                                     </th>
                                     <td>
+                                        <div class="d-block d-sm-none">
+                                            <label for="">電話番号 <strong class="text-danger">※</strong></label>
+                                        </div>
                                         <div class="form-group w-50">
                                             <input type="text" class="form-control" name="phoneNumber">
                                         </div>
@@ -268,6 +290,9 @@
                                         メールアドレス <strong>※</strong>
                                     </th>
                                     <td>
+                                        <div class="d-block d-sm-none">
+                                            <label for="">メールアドレス <strong class="text-danger">※</strong></label>
+                                        </div>
                                         <div class="form-group">
                                             <input type="email" class="form-control" name="email">
                                         </div>
@@ -278,6 +303,9 @@
                                         メールアドレス（確認用）
                                     </th>
                                     <td>
+                                        <div class="d-block d-sm-none">
+                                            <label for="">メールアドレス（確認用）</label>
+                                        </div>
                                         <div class="form-group">
                                             <input type="email" class="form-control" name="email">
                                         </div>
@@ -286,6 +314,9 @@
                                 <tr>
                                     <th>お問い合わせ内容<strong>※</strong></th>
                                     <td> 
+                                        <div class="d-block d-sm-none">
+                                            <label for="">お問い合わせ内容 <strong class="text-danger">※</strong></label>
+                                        </div>
                                         <div class="form-group" id="err-9463">
                                             <textarea name="" id="message"></textarea>  
                                         </div>
@@ -315,7 +346,7 @@
                     <li><i class="fa fa-angle-right"></i></li>
                     <li><a href="recruit-top.html">採用情報</a></li>
                     <li><i class="fa fa-angle-right"></i></li>
-                    <li><a href="app-form.html">応募フォーム</a></li>
+                    <li><a href="#0">応募フォーム</a></li>
                 </ul>
             </div>
         </div>

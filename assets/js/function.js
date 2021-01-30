@@ -2,7 +2,7 @@
 	'use strict';
 
 	//menu top fixed start for mobile menu & desktop menu
-	var fixed_top = $(".header-bgs");
+	var fixed_top = $(".header-bg");
 	$(window).on('scroll', function () {
 	    if ($(this).scrollTop() > 10) {
 	        fixed_top.addClass("menu-fixed animated fadeInDown");
