@@ -67,6 +67,13 @@
                 justify-content: space-between;
             }
             .content-left {
+                strong {
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: $white-color;
+                    margin-bottom: 10px;
+                    display: inline-block;
+                }
                 ul.link-list {
                     margin: 0;
                     list-style: none;
