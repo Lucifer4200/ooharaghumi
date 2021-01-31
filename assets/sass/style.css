@@ -1425,7 +1425,9 @@ footer .footer-content p {
   font-weight: 400;
   color: #fff;
   margin-bottom: 10px;
+  padding-bottom: 10px;
   display: inline-block;
+  border-bottom: 2px solid #fff;
 }
 
 .banner-area .content-bottom .content-inner .content-left ul.link-list {
