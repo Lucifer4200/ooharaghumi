@@ -21,6 +21,7 @@
             padding: 25px;
             border-radius: 3px;
             background: rgba(213,223,225,0.8);
+            border-radius: 0;
             @include breakpoint (lg) {
                 position: absolute;
                 bottom: -25px;
@@ -339,6 +340,9 @@
     .section-wrapper {
         padding: 55px 35px;
         border: 1px solid #ccc;
+        @include breakpoint (mobile) {
+            padding: 55px 25px;
+        }
         @include breakpoint (sm) {
             padding: 40px 50px 20px;
         }
@@ -346,7 +350,7 @@
             h3 {
                 font-weight: 500;
                 @include breakpoint (max-sm) {
-                    font-size: 32px;
+                    font-size: 30px;
                 }
             }
         }
@@ -369,12 +373,21 @@
                 padding-bottom: 5px;
                 letter-spacing: 1.5px;
                 @include breakpoint (max-sm) {
-                    font-size: 22px;
+                    font-size: 32px;
+                }
+                @include breakpoint (max-xs) {
+                    font-size: 25px;
                 }
             }
             span {
-                color: #000;
-                font-size: 14px;
+                color: #333;
+                font-weight: 400;
+                @include breakpoint (mobile) {
+                    font-size: 13.5px;
+                }
+                @include breakpoint (max-xs) {
+                    font-size: 11px;
+                }
             }
         }
         .pastlist-btn {
@@ -383,17 +396,24 @@
                 text-align: left;
             }
             button.btn {
-                background: #0e92ba;
+                &:hover {
+                    span {
+                        i {
+                            color: #0e92ba;
+                            background: $white-color
+                        }
+                    }
+                }
                 span {
-                    color: $white-color;
                     i {
-                        color: #0e92ba;
+                        color: #fff;
                         height: 30px;
                         width: 30px;
                         font-size: 16px;
                         line-height: 30px;
                         border-radius: 100%;
-                        background: $white-color;
+                        background: #0e92ba;
+                        transition: all 0.3s ease-in-out;
                         @include breakpoint (sm) {
                             font-size: 20px;
                             height: 35px;
@@ -456,6 +476,7 @@
                         color: #333;
                         strong {
                             color: #000;
+                            font-weight: 400;
                         }
                     }
                     .contact-info {
@@ -467,9 +488,13 @@
                 }
                 .sponsor-item {
                     padding-top: 20px;
-                    height: 100px;
+                    @include breakpoint (sm) {
+                        height: 100px;
+                    }
                     img {
-                        height: 100%;
+                        @include breakpoint (sm) {
+                            height: 100%;
+                        }
                     }
                 }
             }
@@ -987,7 +1012,6 @@
     .section-wrapper {
         .work-flow-thumb {
             display: none;
-           
             @include breakpoint (sm) {
                 display: block;
                 padding: 20px 0 80px;
@@ -1017,23 +1041,27 @@
                 justify-content: space-between;
             }
             .mobile-workflow-thumb {
-                width: calc(100% - 65%);
+                width: calc(100% - 80%);
+                @include breakpoint (mobile) {
+                    width: calc(100% - 75%);;
+                }
+                @include breakpoint (max-mobile) {
+                    width: calc(100% - 70%);
+                }
                 img {
-                    height: 480px;
-                    @include breakpoint (mobile) {
-                        height: 400px;
-                    }
-                    @include breakpoint (max-mobile) {
-                        height: 380px;
-                    }
-                    @include breakpoint (max-xs) {
-                        height: 390px;
-                    }
+                    width: 100%;
                 }
             }
             .post-inner {
-                width: 60%;
+                width: 75%;
                 padding-bottom: 30px;
+                @include breakpoint (mobile) {
+                    width: 70%;
+                }
+                @include breakpoint (max-mobile) {
+                    width: 65%;
+                    padding-bottom: 18px;
+                }
                 @include breakpoint (sm) {
                     display: flex;
                     flex-wrap: wrap;
@@ -1043,12 +1071,18 @@
                     padding-bottom: 0;
                 }
                 .item-thumb {
+                    @include breakpoint (max-sm) {
+                        height: 200px;
+                    }
                     @include breakpoint (mobile) {
                         height: 150px;
                     }
+                    @include breakpoint (max-xs) {
+                        height: 110px;
+                    }
                     img {
                         width: 100%;
-                        @include breakpoint (mobile) {
+                        @include breakpoint (max-sm) {
                             height: 100%;
                         }
                     }
@@ -1081,14 +1115,18 @@
                     }
                 }
                 .cvl-btn {
-                    display: none;
+                    display: block;
                     position: relative;
-                    @include breakpoint (mobile) {
-                        display: block;
+                    @include breakpoint (sm) {
+                        display: none;
                     }
                     button.btn {
                         border-radius: 5px;
                         padding: 5px 20px;
+                        background: #0e92ba;
+                        span {
+                            color: $white-color;
+                        }
                     }
                     &::after {
                         @extend %absolute;
@@ -1096,13 +1134,17 @@
                         left: -50px;
                         width: 50px;
                         border-bottom: 1px dashed #0e92ba;
-                        @include breakpoint (mobile) {
+                        @include breakpoint (max-sm) {
                             left: -80px;
                             width: 80px;
                         }
+                        @include breakpoint (mobile) {
+                            left: -65px;
+                            width: 65px;
+                        }
                         @include breakpoint (max-mobile) {
-                            left: -70px;
-                            width: 70px;
+                            left: -64px;
+                            width: 64px;
                         }
                         @include breakpoint (max-xs) {
                             left: -60px;
@@ -1146,16 +1188,15 @@
                                 background: #f1ecdf;
                                 @include breakpoint (sm) {
                                     font-size: 15px;
-                                    min-width: 150px;
                                 }
                             }
                             td {
                                 font-size: 14px;
                                 font-weight: 300;
+                                vertical-align: middle;
                                 letter-spacing: .2rem;
                                 @include breakpoint (sm) {
                                     font-size: 15px;
-                                    min-width: 750px;
                                 }
                             }
                         }
@@ -1192,6 +1233,7 @@
                             td {
                                 font-size: 15px;
                                 font-weight: 300;
+                                vertical-align: middle;
                                 letter-spacing: .2rem;
                             }
                         }
@@ -1224,17 +1266,12 @@
                                 font-weight: 300;
                                 letter-spacing: .2rem;
                                 background: #f1ecdf;
-                                @include breakpoint (sm) {
-                                    min-width: 300px;
-                                }
                             }
                             td {
                                 font-size: 15px;
                                 font-weight: 300;
+                                vertical-align: middle;
                                 letter-spacing: .2rem;
-                                @include breakpoint (sm) {
-                                    min-width: 300px;
-                                }
                             }
                         }
                     }
@@ -1421,8 +1458,6 @@
                             th {
                                 font-size: 14px;
                                 font-weight: 300;
-                                min-width: 230px;
-                                max-width: 230px;
                                 letter-spacing: .2rem;
                                 background: #f1ecdf;
                                 @include breakpoint (max-sm) {
@@ -1436,9 +1471,6 @@
                                 @include breakpoint (max-sm) {
                                     border: 0;
                                     border-bottom: 1px dotted;
-                                }
-                                @include breakpoint (sm) {
-                                    min-width: 700px;
                                 }
                                .form-group {
                                    margin-bottom: 0;
@@ -1842,6 +1874,9 @@
             border-radius: 4px;
             @include breakpoint (max-md) {
                 display: grid;
+            }
+            @include breakpoint (max-sm) {
+                border-radius: 0 0 4px 4px;
             }
             .item-left {
                 box-sizing: border-box;

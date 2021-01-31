@@ -11,7 +11,7 @@
         @extend %flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 95vh;
         @include breakpoint (max-sm) {
             height: 80vh;
         } 

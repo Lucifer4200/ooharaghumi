@@ -339,13 +339,14 @@ footer {
                         }
                         &:hover {
                             color: $theme-color;
-                            &::after {
-                                transform: scale(1);
-                                -moz-transform: scale(1);
-                                -webkit-transform: scale(1);
-                                -o-transform: scale(1);
-                                -ms-transform: scale(1);
-                            }
+                            text-decoration: underline;
+                            // &::after {
+                            //     transform: scale(1);
+                            //     -moz-transform: scale(1);
+                            //     -webkit-transform: scale(1);
+                            //     -o-transform: scale(1);
+                            //     -ms-transform: scale(1);
+                            // }
                         }
                         &::before {
                             @extend %absolute;
@@ -359,25 +360,25 @@ footer {
                                 left: 0;
                             }
                         }
-                        &::after {
-                            @extend %absolute;
-                            -webkit-transition: all 0.2s ease-in;
-                            -moz-transition: all 0.2s ease-in;
-                            -ms-transition: all 0.2s ease-in;
-                            -o-transition: all 0.2s ease-in;
-                            transition: all 0.2s ease-in;
-                            transform: scale(0);
-                            -moz-transform: scale(0);
-                            -webkit-transform: scale(0);
-                            -o-transform: scale(0);
-                            -ms-transform: scale(0);
-                            height: 2px;
-                            width: 80%;
-                            background-color: #1a92ba;
-                            bottom: 0;
-                            left: 50%;
-                            margin-left: -40%;
-                        }
+                        // &::after {
+                        //     @extend %absolute;
+                        //     -webkit-transition: all 0.2s ease-in;
+                        //     -moz-transition: all 0.2s ease-in;
+                        //     -ms-transition: all 0.2s ease-in;
+                        //     -o-transition: all 0.2s ease-in;
+                        //     transition: all 0.2s ease-in;
+                        //     transform: scale(0);
+                        //     -moz-transform: scale(0);
+                        //     -webkit-transform: scale(0);
+                        //     -o-transform: scale(0);
+                        //     -ms-transform: scale(0);
+                        //     height: 2px;
+                        //     width: 80%;
+                        //     background-color: #1a92ba;
+                        //     bottom: 0;
+                        //     left: 50%;
+                        //     margin-left: -40%;
+                        // }
                     }
                 }
             }

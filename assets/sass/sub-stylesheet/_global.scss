@@ -308,8 +308,10 @@ button.btn {
        line-height: 1.1; 
        letter-spacing: 2px;
        padding-bottom: 12px;
+       color: #3d3d3d;
        @include breakpoint (md) {
            font-size: 30px;
+           color: #3d3d3d;
        }
     }
     span {
@@ -336,6 +338,8 @@ button.btn {
         line-height: 1.8;
         font-size: medium;
         padding-top: 35px;
+        color: #3d3d3d;
+        letter-spacing: 0.5px;
     }
     &.style-one {
         padding-bottom: 30px;
