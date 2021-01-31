@@ -22,7 +22,7 @@ header {
                 background: #344c5d;
             }
             &.bg-chnage {
-                background: #343434;
+                background: #344c5d;
             }
         }
         .header-item {
@@ -55,7 +55,7 @@ header {
                         top: 100px;
                         left: 0;
                         z-index: 99;
-                        background: #343434;
+                        background: #344c5d;
                         width: 100%;
                         transform: scaleY(0);
                         transform-origin: top;
@@ -76,22 +76,20 @@ header {
                     ul.menu-list {
                         margin: 0;
                         display: block;
-                        border-top: 1px solid #000000;
+                        box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
                         @include breakpoint (lg) {
                             display: flex;
                             justify-content: flex-end;
                             align-items: center;
                             padding-top: 0;
-                            border-top: 0;
+                            box-shadow: none;
                         }
                         li {
                             list-style: none;
                             position: relative;
-                            border-top: 1px solid #484848;
-                            border-bottom: 1px solid #000000;
+                            box-shadow: inset 0 -1px 0 rgba(255,255,255,.1);
                             @include breakpoint (lg) {
-                                border-top: 0;
-                                border-bottom: 0;  
+                                box-shadow: none;  
                             }
                             &.dd-icon-down {
                                 position: relative;
@@ -292,7 +290,7 @@ header {
         .header-bg {
             background: #344c5d;
             &.bg-chnage {
-                background: #343434
+                background: #344c5d;
             }
         }
     }

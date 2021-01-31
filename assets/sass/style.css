@@ -825,7 +825,7 @@ header .header-bg.bg-chnage {
 }
 
 header .header-bg.menu-fixed.bg-chnage {
-  background: #343434;
+  background: #344c5d;
 }
 
 header .header-bg .header-item {
@@ -871,7 +871,7 @@ header .header-bg .header-item .header-logo a.your-barnd img {
     top: 100px;
     left: 0;
     z-index: 99;
-    background: #343434;
+    background: #344c5d;
     width: 100%;
     -webkit-transform: scaleY(0);
             transform: scaleY(0);
@@ -900,7 +900,8 @@ header .header-bg .header-item .header-menu .main-menu.open {
 header .header-bg .header-item .header-menu .main-menu ul.menu-list {
   margin: 0;
   display: block;
-  border-top: 1px solid #000000;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 992px) {
@@ -915,21 +916,22 @@ header .header-bg .header-item .header-menu .main-menu ul.menu-list {
         -ms-flex-align: center;
             align-items: center;
     padding-top: 0;
-    border-top: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 
 header .header-bg .header-item .header-menu .main-menu ul.menu-list li {
   list-style: none;
   position: relative;
-  border-top: 1px solid #484848;
-  border-bottom: 1px solid #000000;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+          box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 992px) {
   header .header-bg .header-item .header-menu .main-menu ul.menu-list li {
-    border-top: 0;
-    border-bottom: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 
@@ -1183,7 +1185,7 @@ header.style-one .header-bg {
 }
 
 header.style-one .header-bg.bg-chnage {
-  background: #343434;
+  background: #344c5d;
 }
 
 footer .footer-menu-item {
