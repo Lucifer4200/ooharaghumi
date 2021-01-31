@@ -372,12 +372,16 @@
                 margin: 0;
                 padding-bottom: 5px;
                 letter-spacing: 1.5px;
+                @include breakpoint (max-lg) {
+                    font-size: 28px;
+                }
                 @include breakpoint (max-sm) {
                     font-size: 32px;
                 }
                 @include breakpoint (max-xs) {
                     font-size: 25px;
                 }
+                
             }
             span {
                 color: #333;
@@ -396,6 +400,11 @@
                 text-align: left;
             }
             button.btn {
+                width: 100%;
+                border: 2px solid #0e92ba;
+                @include breakpoint (sm) {
+                    padding: 25.5px 30px;
+                }
                 &:hover {
                     span {
                         i {
@@ -416,9 +425,9 @@
                         transition: all 0.3s ease-in-out;
                         @include breakpoint (sm) {
                             font-size: 20px;
-                            height: 35px;
-                            width: 35px;
-                            line-height: 35px;
+                            height: 45px;
+                            width: 45px;
+                            line-height: 45px;
                         }
                     }
                 }
@@ -426,8 +435,12 @@
                     padding: 10px;
                 }
                 span {
-                    @include breakpoint (mobile) {
-                        font-size: 10px;
+                    font-size: 18px;
+                    @include breakpoint (max-mobile) {
+                        font-size: 15px;
+                    }
+                    @include breakpoint (lg) {
+                        font-size: 22px;
                     }
                 }
             }

@@ -2028,6 +2028,12 @@ footer .footer-content p {
   letter-spacing: 1.5px;
 }
 
+@media (max-width: 991px) {
+  .seepast-area .section-wrapper .past-content h3 {
+    font-size: 28px;
+  }
+}
+
 @media (max-width: 575px) {
   .seepast-area .section-wrapper .past-content h3 {
     font-size: 32px;
@@ -2067,6 +2073,17 @@ footer .footer-content p {
   }
 }
 
+.seepast-area .section-wrapper .pastlist-btn button.btn {
+  width: 100%;
+  border: 2px solid #0e92ba;
+}
+
+@media (min-width: 576px) {
+  .seepast-area .section-wrapper .pastlist-btn button.btn {
+    padding: 25.5px 30px;
+  }
+}
+
 .seepast-area .section-wrapper .pastlist-btn button.btn:hover span i {
   color: #0e92ba;
   background: #fff;
@@ -2087,9 +2104,9 @@ footer .footer-content p {
 @media (min-width: 576px) {
   .seepast-area .section-wrapper .pastlist-btn button.btn span i {
     font-size: 20px;
-    height: 35px;
-    width: 35px;
-    line-height: 35px;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
   }
 }
 
@@ -2099,9 +2116,19 @@ footer .footer-content p {
   }
 }
 
-@media (max-width: 425px) {
+.seepast-area .section-wrapper .pastlist-btn button.btn span {
+  font-size: 18px;
+}
+
+@media (max-width: 375px) {
   .seepast-area .section-wrapper .pastlist-btn button.btn span {
-    font-size: 10px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .seepast-area .section-wrapper .pastlist-btn button.btn span {
+    font-size: 22px;
   }
 }
 
