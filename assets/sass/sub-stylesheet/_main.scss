@@ -1044,26 +1044,26 @@
                 }
             }
         }
-        .col-lg-4.col-md-6.col-12.pl-sm-1.pr-sm-1:nth-child(1) {
-            .post-content {
-                .mobile-workflow-thumb {
-                    @include breakpoint (mobile) {
-                        height: 360px;
-                    }
-                    @include breakpoint (max-mobile) {
-                        height: 310px;
-                    }
-                    @include breakpoint (max-xs) {
-                        height: 280px;
-                    }
-                    img {
-                        @include breakpoint (mobile) {
-                            height: 100%;
-                        }
-                    }
-                }
-            }
-        }
+        // .col-lg-4.col-md-6.col-12.pl-sm-1.pr-sm-1:nth-child(1) {
+        //     .post-content {
+        //         .mobile-workflow-thumb {
+        //             @include breakpoint (mobile) {
+        //                 height: 360px;
+        //             }
+        //             @include breakpoint (max-mobile) {
+        //                 height: 310px;
+        //             }
+        //             @include breakpoint (max-xs) {
+        //                 height: 280px;
+        //             }
+        //             img {
+        //                 @include breakpoint (mobile) {
+        //                     height: 100%;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
         .post-content {
             width: 100%;
             @include breakpoint (max-sm) {
