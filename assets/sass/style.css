@@ -1514,6 +1514,12 @@ footer .footer-content p {
   color: #fff;
 }
 
+@media (max-width: 320px) {
+  .page-header .banner-position .banner-title h3 {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 575px) {
   .page-header.style-one {
     min-height: 150px;
