@@ -2158,7 +2158,7 @@ footer .footer-content p {
   background: #fff;
 }
 
-.map-area .section-wrapper .col-padd .sponsor-content .sponsor-inner h3 {
+.map-area .section-wrapper .col-padd .sponsor-content h3 {
   margin: 0;
   padding-bottom: 15px;
   font-weight: 400;
@@ -2167,22 +2167,22 @@ footer .footer-content p {
 }
 
 @media (min-width: 576px) {
-  .map-area .section-wrapper .col-padd .sponsor-content .sponsor-inner h3 {
+  .map-area .section-wrapper .col-padd .sponsor-content h3 {
     font-size: 24px;
     padding-bottom: 24px;
   }
 }
 
-.map-area .section-wrapper .col-padd .sponsor-content .sponsor-inner span {
+.map-area .section-wrapper .col-padd .sponsor-content span {
   color: #333;
 }
 
-.map-area .section-wrapper .col-padd .sponsor-content .sponsor-inner span strong {
+.map-area .section-wrapper .col-padd .sponsor-content span strong {
   color: #000;
   font-weight: 400;
 }
 
-.map-area .section-wrapper .col-padd .sponsor-content .sponsor-inner .contact-info span {
+.map-area .section-wrapper .col-padd .sponsor-content .contact-info span {
   padding-top: 5px;
   display: block;
 }

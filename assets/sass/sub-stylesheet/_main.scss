@@ -472,7 +472,6 @@
             .sponsor-content {
                 padding: 50px 30px 35px;
                 background: $white-color;
-                .sponsor-inner {
                     h3 {
                         margin: 0;
                         padding-bottom: 15px;
@@ -497,7 +496,6 @@
                             display: block;
                         }
                     }
-                }
                 .sponsor-item {
                     padding-top: 20px;
                     @include breakpoint (sm) {
