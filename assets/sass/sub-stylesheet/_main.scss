@@ -497,15 +497,8 @@
                         }
                     }
                 .sponsor-item {
-                    padding-top: 20px;
-                    @include breakpoint (sm) {
-                        height: 100px;
-                    }
-                    img {
-                        @include breakpoint (sm) {
-                            height: 100%;
-                        }
-                    }
+                    padding-top: 8px;
+                   
                 }
             }
         }

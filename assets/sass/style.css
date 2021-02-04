@@ -2194,19 +2194,7 @@ footer .footer-content p {
 }
 
 .map-area .section-wrapper .col-padd .sponsor-content .sponsor-item {
-  padding-top: 20px;
-}
-
-@media (min-width: 576px) {
-  .map-area .section-wrapper .col-padd .sponsor-content .sponsor-item {
-    height: 100px;
-  }
-}
-
-@media (min-width: 576px) {
-  .map-area .section-wrapper .col-padd .sponsor-content .sponsor-item img {
-    height: 100%;
-  }
+  padding-top: 8px;
 }
 
 .about-us-area {
