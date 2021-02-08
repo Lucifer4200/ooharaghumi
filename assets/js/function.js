@@ -67,7 +67,7 @@
   // Scroll To Top 
   var scrollTop = $(".scrollToTop");
   $(window).on('scroll', function () {
-    if ($(this).scrollTop() < 500) {
+    if ($(this).scrollTop() < 200) {
       scrollTop.removeClass("active");
     } else {
       scrollTop.addClass("active");
@@ -78,7 +78,7 @@
   $('.scrollToTop').on('click', function () {
     $('html, body').animate({
       scrollTop: 0
-    }, 500);
+    }, 200);
     return false;
   });
 
